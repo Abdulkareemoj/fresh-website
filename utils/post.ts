@@ -1,5 +1,5 @@
-import { extract } from "$std/encoding/front_matter.ts";
-import { join } from "$std/path/posix.ts";
+import { extract } from "https://deno.land/std@0.214.0/front_matter/any.ts";
+import { join } from "https://deno.land/std@0.211.0/path/join.ts";
 
 const DIRECTORY = "./posts";
 
