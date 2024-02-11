@@ -1,7 +1,7 @@
 import { extract } from "https://deno.land/std@0.214.0/front_matter/any.ts";
 import { join } from "https://deno.land/std@0.211.0/path/join.ts";
 
-const DIRECTORY = "./posts";
+const directory = `${Deno.cwd()}../static/posts`;
 
 export interface Post {
   slug: string;
@@ -13,7 +13,7 @@ export interface Post {
 
 // Get posts.
 export async function getPosts(): Promise<Post[]> {
-  const files = Deno.readDir(DIRECTORY);
+  const files = Deno.readDir(directory);
   const promises = [];
   for await (const file of files) {
     const slug = file.name.replace(".md", "");
@@ -26,13 +26,13 @@ export async function getPosts(): Promise<Post[]> {
 
 // Get post.
 export async function getPost(slug: string): Promise<Post | null> {
-  const text = await Deno.readTextFile(join(DIRECTORY, `${slug}.md`));
+  const text = await Deno.readTextFile(join(directory, `${slug}.md`));
   const { attrs, body } = extract(text);
   return {
     slug,
-    title: attrs.title,
-    publishedAt: new Date(attrs.published_at),
+    title: attrs.title as string,
+    publishedAt: new Date(attrs.published_at as Date),
     content: body,
-    snippet: attrs.snippet,
+    snippet: attrs.snippet as string,
   };
 }
