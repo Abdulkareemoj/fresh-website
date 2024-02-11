@@ -10,10 +10,12 @@ import * as $blog_slug_ from "./routes/blog/[slug].tsx";
 import * as $blog_404 from "./routes/blog/_404.tsx";
 import * as $blog_feed from "./routes/blog/feed.ts";
 import * as $blog_index from "./routes/blog/index.tsx";
+import * as $contact from "./routes/contact.tsx";
 import * as $greet_name_ from "./routes/greet/[name].tsx";
 import * as $index from "./routes/index.tsx";
 import * as $projects from "./routes/projects.tsx";
 import * as $Counter from "./islands/Counter.tsx";
+import * as $theme from "./islands/theme.tsx";
 import { type Manifest } from "$fresh/server.ts";
 
 const manifest = {
@@ -26,12 +28,14 @@ const manifest = {
     "./routes/blog/_404.tsx": $blog_404,
     "./routes/blog/feed.ts": $blog_feed,
     "./routes/blog/index.tsx": $blog_index,
+    "./routes/contact.tsx": $contact,
     "./routes/greet/[name].tsx": $greet_name_,
     "./routes/index.tsx": $index,
     "./routes/projects.tsx": $projects,
   },
   islands: {
     "./islands/Counter.tsx": $Counter,
+    "./islands/theme.tsx": $theme,
   },
   baseUrl: import.meta.url,
 } satisfies Manifest;
