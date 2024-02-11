@@ -13,32 +13,32 @@ export default function Footer() {
         {
           name: "RSS",
           href: "/rss.xml",
-          icon: <IconRss className="w-4 h-4" />,
+          icon: <IconRss className="w-2 h-2" />,
         },
         {
           name: "Sitemap",
           href: "/sitemap-index.xml",
-          icon: <IconSitemap className="w-4 h-4" />,
+          icon: <IconSitemap className="w-2 h-2" />,
         },
         {
           name: "Email",
           href: "mailto:abdulkareemojerinde@gmail.com",
-          icon: <IconMail className="w-4 h-4" />,
+          icon: <IconMail className="w-2 h-2" />,
         },
         {
           name: "GitHub",
           href: "https://github.com/abdulkareemoj",
-          icon: <IconBrandGithub className="w-4 h-4" />,
+          icon: <IconBrandGithub className="w-2 h-2" />,
         },
         {
           name: "LinkedIn",
           href: "https://www.linkedin.com/in/",
-          icon: <IconBrandLinkedin className="w-4 h-4" />,
+          icon: <IconBrandLinkedin className="w-2 h-2" />,
         },
         {
           name: "Twitter",
           href: "https://x.com/abdulkareemoj",
-          icon: <IconBrandXFilled className="w-4 h-4" />,
+          icon: <IconBrandXFilled className="w-2 h-2" />,
         },
       ],
     },
@@ -56,7 +56,7 @@ export default function Footer() {
             <div key={index}>
               <div className="flex mt-2">
                 {item.links.map((child) => (
-                  <div className="px-2" key={child.name}>
+                  <div className="px-1" key={child.name}>
                     <a href={child.href}>
                       {child.icon}
                     </a>
