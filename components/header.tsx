@@ -18,7 +18,7 @@ export default function Header({ active }: Props) {
       <div className="flex items-center flex-1">
         <LemonIcon aria-hidden="true" />
         <div className="text-2xl ml-1 font-bold">
-          Fresh
+          Home
         </div>
       </div>
 
