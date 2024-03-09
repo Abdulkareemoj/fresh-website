@@ -1,13 +1,27 @@
-import { createExtractor } from "https://deno.land/std@0.215.0/front_matter/mod.ts";
+import {
+  createExtractor,
+  Parser,
+} from "https://deno.land/std@0.219.0/front_matter/mod.ts";
 import { join } from "https://deno.land/std@0.211.0/path/join.ts";
+import { parse as parseYAML } from "https://deno.land/std@0.219.0/yaml/parse.ts";
 
+const extractYAML = createExtractor({ yaml: parseYAML as Parser });
 const directory = `${Deno.cwd()}/posts`;
+
 export interface Post {
   slug: string;
   title: string;
   publishDate: Date;
   snippet: string;
   content: string;
+  description: string;
+  image: string;
+}
+
+export interface FrontMatter {
+  title: string;
+  publishDate: string;
+  snippet: string;
   description: string;
   image: string;
 }
@@ -33,21 +47,18 @@ export async function getPost(slug: string): Promise<Post | null> {
   }
 
   const text = await Deno.readTextFile(join(directory, `${slug}.md`));
-  const { data, content } = parseFrontMatter({
-    content: text,
-    data: { yaml: (str) => JSON.parse(str) },
-  });
+  const { attrs, body } = extractYAML(text);
 
-  if (typeof data !== "object" || data === null) {
+  if (typeof attrs !== "object" || attrs === null) {
     throw new Error("Invalid front matter");
   }
 
-  // const frontMatter = data as FrontMatter;
+  const frontMatter = attrs as unknown as FrontMatter;
 
   return {
-    ...data,
+    ...frontMatter,
     slug,
-    content,
-    publishDate: new Date(data.publishDate),
+    content: body,
+    publishDate: new Date(frontMatter.publishDate),
   } as Post;
 }
