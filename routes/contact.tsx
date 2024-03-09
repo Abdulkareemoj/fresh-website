@@ -4,7 +4,7 @@ export default function Contact() {
       id="contact"
       class="lg:grid-cols-desktop grid scroll-mt-16 grid-cols-1 gap-x-10 gap-y-4"
     >
-      <h1 class="text-3xl font-bold uppercase text-gray-600 dark:text-gray-400 lg:text-right">
+      <h1 class="text-3xl font-bold uppercase">
         Contact
       </h1>
       <div>
@@ -17,9 +17,9 @@ export default function Contact() {
               type="email"
               id="email"
               name="email"
-              placeholder="email"
+              placeholder="example@email.com"
               required
-              class="border(gray-500 1) disabled:(opacity-50 cursor-not-allowed) w-full rounded-md bg-gray-100 px-3 py-2 dark:bg-gray-800"
+              class="border(gray-500 1) disabled:(opacity-50 cursor-not-allowed) w-full rounded-md bg-gray-100 px-3 py-2"
             />
           </div>
           <div class="space-y-1">
@@ -30,16 +30,17 @@ export default function Contact() {
               id="message"
               name="message"
               required
+              placeholder="Enter Message"
               minLength={10}
               maxLength={10000}
               rows={10}
-              class="border(gray-500 1) disabled:(opacity-50 cursor-not-allowed) w-full rounded-md bg-gray-100 px-3 py-2 dark:bg-gray-800"
+              class="border(gray-500 1) disabled:(opacity-50 cursor-not-allowed) w-full rounded-md bg-gray-100 px-3 py-2"
               label="message"
             />
           </div>
           <input
             type="submit"
-            class="border(gray-500 1) hover:(bg-gray-200 dark:bg-gray-700) disabled:(opacity-50 cursor-not-allowed) cursor-pointer rounded-md bg-gray-100 px-3 py-2 active:bg-gray-300 dark:bg-gray-800"
+            class="border(gray-500 1) hover:(bg-gray-200 dark:bg-gray-700) disabled:(opacity-50 cursor-not-allowed) cursor-pointer rounded-md bg-gray-100 px-3 py-2 active:bg-gray-300"
             // value={}
           />
         </form>

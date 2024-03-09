@@ -1,6 +1,6 @@
 import { PageProps } from "$fresh/server.ts";
-import Footer from "../components/footer.tsx";
-import Header from "../components/header.tsx";
+import Footer from "../components/Footer.tsx";
+import Header from "../components/Header.tsx";
 
 export default function Layout({ Component, state }: PageProps) {
   // do something with state here

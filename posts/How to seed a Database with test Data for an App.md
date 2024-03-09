@@ -1,11 +1,12 @@
 ---
-publishDate: 'Jan 31 2024'
-title: 'How to seed a Database with test Data for an App'
-description: 'Creating a seed file for your Database with JSON'
-excerpt: 'I was working on a personal project when i decided to test it out with real data but i realized that i couldnt type out and insert data for over a 100 samoles by hand, thats just not the Programer/SWE way to do things...'
-image: 'an image for the blogs page'
+publishDate: "2022-11-04"
+title: "How to seed a Database with test Data for an App"
+description: "Creating a seed file for your Database with JSON"
+snippet: "I was working on a personal project when i decided to test it out with real data but i realized that i couldnt type out and insert data for over a 100 samoles by hand, thats just not the Programer/SWE way to do things..."
+image: "an image for the blogs page"
 ---
-I was working on a personal project recently when i decided to test it out with real data but i realized that i couldn't type out and insert data for over a 100 samples by hand, thats just not the Programer/SWE way to do things. So i set out to find a better  way to do it and m 
+
+I was working on a personal project recently when i decided to test it out with real data but i realized that i couldn't type out and insert data for over a 100 samples by hand, thats just not the Programer/SWE way to do things. So i set out to find a better way to do it and m
 
 ## <a name="Headings"></a>Headings
 

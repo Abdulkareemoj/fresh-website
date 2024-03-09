@@ -1,6 +1,6 @@
-import Body from "../components/body.tsx";
-import Projects from "../components/project.tsx";
-import Blog from "../components/blog.tsx";
+import Body from "../components/Body.tsx";
+import Projects from "../components/Project.tsx";
+import Blog from "../components/Blog.tsx";
 export default function Home() {
   // const count = useSignal(3);?
   return (

@@ -1,17 +1,18 @@
-import { extract } from "https://deno.land/std@0.214.0/front_matter/any.ts";
+import { createExtractor } from "https://deno.land/std@0.215.0/front_matter/mod.ts";
 import { join } from "https://deno.land/std@0.211.0/path/join.ts";
 
-const directory = `${Deno.cwd()}../static/posts`;
-
+const directory = `${Deno.cwd()}/posts`;
 export interface Post {
   slug: string;
   title: string;
-  publishedAt: Date;
+  publishDate: Date;
   snippet: string;
   content: string;
+  description: string;
+  image: string;
 }
 
-// Get posts.
+// Get posts
 export async function getPosts(): Promise<Post[]> {
   const files = Deno.readDir(directory);
   const promises = [];
@@ -20,19 +21,33 @@ export async function getPosts(): Promise<Post[]> {
     promises.push(getPost(slug));
   }
   const posts = await Promise.all(promises) as Post[];
-  posts.sort((a, b) => b.publishedAt.getTime() - a.publishedAt.getTime());
+  posts.sort((a, b) => b.publishDate.getTime() - a.publishDate.getTime());
   return posts;
 }
 
-// Get post.
+// Get post
 export async function getPost(slug: string): Promise<Post | null> {
+  // Validate the slug
+  if (slug.includes("..") || slug.includes("/")) {
+    throw new Error("Invalid slug");
+  }
+
   const text = await Deno.readTextFile(join(directory, `${slug}.md`));
-  const { attrs, body } = extract(text);
+  const { data, content } = parseFrontMatter({
+    content: text,
+    data: { yaml: (str) => JSON.parse(str) },
+  });
+
+  if (typeof data !== "object" || data === null) {
+    throw new Error("Invalid front matter");
+  }
+
+  // const frontMatter = data as FrontMatter;
+
   return {
+    ...data,
     slug,
-    title: attrs.title as string,
-    publishedAt: new Date(attrs.published_at as Date),
-    content: body,
-    snippet: attrs.snippet as string,
-  };
+    content,
+    publishDate: new Date(data.publishDate),
+  } as Post;
 }

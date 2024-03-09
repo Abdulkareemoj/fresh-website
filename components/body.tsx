@@ -17,7 +17,7 @@ export default function Body() {
       </p>
 
       <p>
-        Right now I&apos;m work ing at
+        Right now I&apos;m working at
         <strong>
           <a href="#" target="_blank">
             {" "}
