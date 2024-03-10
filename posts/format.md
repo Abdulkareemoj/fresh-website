@@ -1,8 +1,8 @@
 ---
-publishDate: "2020-01-01"
 title: "Add title"
-description: "Add a description"
+publishDate: "2020-01-01"
 snippet: "something on the article"
+description: "Add a description"
 image: "an image for the blogs page"
 ---
 
