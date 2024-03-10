@@ -1,4 +1,11 @@
-export async function getProjects() {
+export interface Project {
+  repo: string;
+  link: string;
+  description: string;
+  image: string;
+}
+
+export function getProjects() {
   return [
     {
       repo: "app1",
