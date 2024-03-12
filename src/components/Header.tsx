@@ -1,11 +1,7 @@
 import { useState } from "preact/hooks";
 import LemonIcon from "https://deno.land/x/tabler_icons_tsx@0.0.3/tsx/lemon-2.tsx";
 
-type Props = {
-  active: string;
-};
-
-export default function Header({ active }: Props) {
+export default function Header() {
   // const [isOpen, setIsOpen] = useState(false);
   const menus = [
     { name: "Blog", href: "/blog" },
@@ -26,8 +22,7 @@ export default function Header({ active }: Props) {
         <div>
           <a
             href={menu.href}
-            className={"flex p-4 text-gray-500 hover:text-gray-700 py-1 border-gray-500" +
-              (menu.href === active ? " font-bold border-b-2" : "")}
+            class="flex p-4 text-gray-500 hover:text-black py-1 border-gray-500 [aria-current]:text-green-600"
           >
             {menu.name}
           </a>

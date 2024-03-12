@@ -1,5 +1,5 @@
 import { Handlers } from "$fresh/server.ts";
-import { getPosts, Post } from "../../utils/post.ts";
+import { getPosts, Post } from "../../../utils/post.ts";
 import { Feed, type Item as FeedItem } from "https://esm.sh/feed@4.2.2";
 
 export const handler: Handlers<Post[]> = {

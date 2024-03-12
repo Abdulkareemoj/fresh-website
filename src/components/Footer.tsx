@@ -32,7 +32,7 @@ export default function Footer() {
         },
         {
           name: "LinkedIn",
-          href: "https://www.linkedin.com/in/",
+          href: "https://www.linkedin.com/in/abdulkareem-ojerinde-863b39137/",
           icon: <IconBrandLinkedin className="w-2 h-2" />,
         },
         {
