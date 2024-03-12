@@ -1,6 +1,6 @@
 import { useState } from "preact/hooks";
-import LemonIcon from "https://deno.land/x/tabler_icons_tsx@0.0.3/tsx/lemon-2.tsx";
-
+import LemonIcon from "https://deno.land/x/tabler_minor stufficons_tsx@0.0.3/tsx/lemon-2.tsx";
+import { Button } from "./Button.tsx";
 export default function Header() {
   // const [isOpen, setIsOpen] = useState(false);
   const menus = [
@@ -18,16 +18,20 @@ export default function Header() {
         </div>
       </div>
 
-      {menus.map((menu) => (
-        <div>
-          <a
-            href={menu.href}
-            class="flex p-4 text-gray-500 hover:text-black py-1 border-gray-500 [aria-current]:text-green-600"
-          >
-            {menu.name}
-          </a>
-        </div>
-      ))}
+      <div>
+        {" "}
+        {menus.map((menu) => (
+          <div>
+            <a
+              href={menu.href}
+              class="flex p-4 text-gray-500 hover:text-black py-1 border-gray-500 [aria-current]:text-green-600"
+            >
+              {menu.name}
+            </a>
+          </div>
+        ))}{" "}
+      </div>
+      <Button>Resume</Button>
     </div>
   );
 }

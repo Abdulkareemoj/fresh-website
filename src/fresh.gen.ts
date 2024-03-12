@@ -2,17 +2,17 @@
 // This file SHOULD be checked into source version control.
 // This file is automatically updated during development when running `dev.ts`.
 
-import * as $_404 from "./src/routes/_404.tsx";
-import * as $_app from "./src/routes/_app.tsx";
-import * as $_layout from "./src/routes/_layout.tsx";
-import * as $api_joke from "./src/routes/api/joke.ts";
-import * as $blog_slug_ from "./src/routes/blog/[slug].tsx";
-import * as $blog_404 from "./src/routes/blog/_404.tsx";
-import * as $blog_feed from "./src/routes/blog/feed.ts";
-import * as $blog_index from "./src/routes/blog/index.tsx";
-import * as $contact from "./src/routes/contact.tsx";
-import * as $index from "./src/routes/index.tsx";
-import * as $projects from "./src/routes/projects.tsx";
+import * as $_404 from "./routes/_404.tsx";
+import * as $_app from "./routes/_app.tsx";
+import * as $_layout from "./routes/_layout.tsx";
+import * as $api_joke from "./routes/api/joke.ts";
+import * as $blog_slug_ from "./routes/blog/[slug].tsx";
+import * as $blog_404 from "./routes/blog/_404.tsx";
+import * as $blog_feed from "./routes/blog/feed.ts";
+import * as $blog_index from "./routes/blog/index.tsx";
+import * as $contact from "./routes/contact.tsx";
+import * as $index from "./routes/index.tsx";
+import * as $projects from "./routes/projects.tsx";
 import * as $Counter from "./islands/Counter.tsx";
 import * as $Theme from "./islands/Theme.tsx";
 import { type Manifest } from "$fresh/server.ts";
