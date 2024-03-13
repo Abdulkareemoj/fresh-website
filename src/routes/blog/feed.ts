@@ -1,5 +1,5 @@
 import { Handlers } from "$fresh/server.ts";
-import { getPosts, Post } from "../../../utils/post.ts";
+import { getPosts, Post } from "../../utils/post.ts";
 import { Feed, type Item as FeedItem } from "https://esm.sh/feed@4.2.2";
 
 export const handler: Handlers<Post[]> = {
@@ -27,10 +27,10 @@ export const handler: Handlers<Post[]> = {
         id: `${origin}/${post.title}`,
         title: post.title,
         description: post.snippet,
-        date: post.publishedAt,
+        date: post.publishDate,
         link: `${origin}/${post.slug}`,
         copyright,
-        published: post.publishedAt,
+        published: post.publishDate,
       };
       feed.addItem(item);
     });
