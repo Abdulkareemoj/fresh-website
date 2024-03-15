@@ -18,12 +18,12 @@ export default function Header() {
           <a href="/">Home</a>
         </div>
 
-        <div>
+        <div class="flex flex-col">
           {menus.map((menu) => (
             <div>
               <a
                 href={menu.href}
-                class="flex justify-center p-4 text-gray-500  hover:text-black py-1 border-gray-500 [aria-current]:text-green-600"
+                class="justify-center p-4 text-gray-500 hover:text-black py-1 border-gray-500 [aria-current]:text-green-600"
               >
                 {menu.name}
               </a>
