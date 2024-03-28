@@ -7,7 +7,7 @@ export default function Layout({ Component, state }: PageProps) {
   return (
     <>
       <Header />
-      <main className="mx-auto max-w-3xl px-6 py-12 sm:px-6 sm:py-10 lg:py-10">
+      <main className="mx-auto max-w-3xl px-6 py-12 sm:px-6 sm:py-10 lg:py-10 dark:bg-slate-800 dark:text-white">
         <Component />
         <Footer />
       </main>

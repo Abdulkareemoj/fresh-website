@@ -10,10 +10,10 @@ export default function Contact() {
       </Head>
       <section
         id="contact"
-        class="lg:grid-cols-desktop grid scroll-mt-16 grid-cols-1 gap-x-10 gap-y-4"
+        class="lg:grid-cols-desktop grid scroll-mt-16 grid-cols-1 gap-x-10 gap-y-4 dark:bg-slate-800"
       >
         <h1 class="text-3xl font-bold uppercase">Contact</h1>
-        <div>
+        <div class="dark:text-white">
           <form action="/send" class="space-y-3 py-3">
             <div class="space-y-1">
               <label for="email" class="text-sm uppercase">

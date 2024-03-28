@@ -11,14 +11,14 @@ export default function Header() {
   ];
 
   return (
-    <div className="mx-auto w-full max-w-5xl py-3 px-3  md:py-3.5 md:px-4">
+    <div className="mx-auto w-full max-w-5xl py-3 px-3  md:py-3.5 md:px-4 dark:bg-slate-800">
       <div className="flex  flex-row   justify-between">
         {/* <LemonIcon aria-hidden="true" /> */}
-        <div className="text-2xl ml-1 font-bold">
+        <div className="text-2xl dark:text-white ml-1 font-bold">
           <a href="/">Home</a>
         </div>
 
-        <div class="flex flex-col">
+        <div class="flex dark:text-white p-44">
           {menus.map((menu) => (
             <div>
               <a
@@ -32,7 +32,7 @@ export default function Header() {
         </div>
         <div>
           <Button>
-            <a href={asset("/resume.pdf")}>Resume</a>
+            <a class="dark:text-white " href={asset("/resume.pdf")}>Resume</a>
           </Button>
         </div>
       </div>
