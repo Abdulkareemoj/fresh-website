@@ -1,7 +1,6 @@
-import { useState } from "preact/hooks";
-// import LemonIcon from "https://deno.land/x/tabler_minor stufficons_tsx@0.0.3/tsx/lemon-2.tsx";
 import { Button } from "./Button.tsx";
 import { asset } from "$fresh/runtime.ts";
+import Toggle from "../components/Toggle.tsx";
 export default function Header() {
   // const [isOpen, setIsOpen] = useState(false);
   const menus = [
@@ -18,7 +17,7 @@ export default function Header() {
           <a href="/">Home</a>
         </div>
 
-        <div class="flex dark:text-white p-44">
+        <div class="flex dark:text-white px-4 py-2">
           {menus.map((menu) => (
             <div>
               <a
@@ -34,6 +33,7 @@ export default function Header() {
           <Button>
             <a class="dark:text-white " href={asset("/resume.pdf")}>Resume</a>
           </Button>
+          <Toggle />
         </div>
       </div>
     </div>
