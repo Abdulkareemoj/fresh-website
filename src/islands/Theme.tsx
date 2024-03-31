@@ -1,8 +1,10 @@
-import { useEffect } from "preact/hooks";
-import { useSignal } from "@preact/signals";
+import { Button } from "../components/Button.tsx";
+
 import IconSunFilled from "https://deno.land/x/tabler_icons_tsx@0.0.5/tsx/sun-filled.tsx";
 import IconMoonFilled from "https://deno.land/x/tabler_icons_tsx@0.0.5/tsx/moon-filled.tsx";
 import IconDeviceDesktop from "https://deno.land/x/tabler_icons_tsx@0.0.5/tsx/device-desktop.tsx";
+import { useEffect } from "preact/hooks";
+import { useSignal } from "@preact/signals";
 
 const modes = ["os", "dark", "light"] as const;
 const opacities = ["opacity-100", "opacity-0", "opacity-0"];
@@ -14,7 +16,7 @@ export default function Theme() {
   function detectMode() {
     if (
       localStorage.colorMode === "dark" ||
-      (!("theme" in localStorage) &&
+      (!("colorMode" in localStorage) &&
         window.matchMedia("(prefers-color-scheme: dark)").matches)
     ) {
       document.documentElement.classList.add("dark");
@@ -23,19 +25,19 @@ export default function Theme() {
       document.documentElement.classList.remove("dark");
       state.value = "light";
     }
-    if (!("theme" in localStorage)) state.value = "os";
+    if (!("colorMode" in localStorage)) state.value = "os";
   }
 
   function toggle() {
     state.value = modes[(modes.indexOf(state.value) + 1) % modes.length];
     if (state.value === "os") {
-      localStorage.removeItem("theme");
+      localStorage.removeItem("colorMode");
     } else {
       localStorage.colorMode = state.value;
     }
     if (
       localStorage.colorMode === "dark" ||
-      (!("theme" in localStorage) &&
+      (!("colorMode" in localStorage) &&
         window.matchMedia("(prefers-color-scheme: dark)").matches)
     ) {
       document.documentElement.classList.add("dark");
@@ -48,7 +50,7 @@ export default function Theme() {
 
   return (
     <div
-      className="hover:(text-gray-700 dark:text-gray-100) relative h-6 w-6 cursor-pointer sm:w-7"
+      class="hover:(text-gray-700 dark:text-gray-100) relative h-6 w-6 cursor-pointer sm:w-7"
       onClick={toggle}
     >
       {icons.map((Icon, i) => {
@@ -69,7 +71,7 @@ export default function Theme() {
           modes.length;
         return (
           <div
-            className={"absolute top-0 origin-bottom pb-1 transition duration-300 ease-linear " +
+            class={"absolute top-0 origin-bottom pb-1 transition duration-300 ease-linear " +
               `${opacities[pos]}`}
           >
             {Icon}
