@@ -1,12 +1,12 @@
 ---
-title: "How to seed a Database with test Data for an App"
-publishDate: "2022-11-04"
-description: "I was working on a personal project when i decided to test it out with real data but i realized that i couldnt type out and insert data for over a 100 samoles by hand, thats just not the Programer/SWE way to do things..."
+title: "Exploring WSA with Flutter for Android Development: A Comprehensive Guide"
+publishDate: "2020-04-04"
 
+description: "Windows Subsystem for Android (WSA) provides a seamless environment for running Android apps directly on Windows, offering a more efficient and integrated development experience. In this guide, we'll explore how to leverage WSA with Flutter for Android development, highlighting its benefits and providing a step-by-step guide to get started."
 image: "an image for the blogs page"
 ---
 
-I was working on a personal project recently when i decided to test it out with real data but i realized that i couldn't type out and insert data for over a 100 samples by hand, thats just not the Programer/SWE way to do things. So i set out to find a better way to do it and m
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 ## <a name="Headings"></a>Headings
 
