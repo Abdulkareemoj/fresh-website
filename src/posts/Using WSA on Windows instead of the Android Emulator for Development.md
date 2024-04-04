@@ -2,35 +2,138 @@
 title: "Exploring WSA with Flutter for Android Development: A Comprehensive Guide"
 publishDate: "2020-04-04"
 
-description: "Windows Subsystem for Android (WSA) provides a seamless environment for running Android apps directly on Windows, offering a more efficient and integrated development experience. In this guide, we'll explore how to leverage WSA with Flutter for Android development, highlighting its benefits and providing a step-by-step guide to get started."
+description: "Windows Subsystem for Android (WSA) provides a seamless environment for running Android apps directly on Windows, offering a more efficient and integrated development experience. In this guide, we'll explore how to leverage WSA with Flutter for Android development and provide a step-by-step guide to get started."
 image: "an image for the blogs page"
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+When it comes to Android development, emulators have long been the go-to choice for testing and debugging applications. Whether with native applications or Hybrid apps, however with the advent of Windows Subsystem for Android (WSA), developers now have a decent alternative at their disposal. WSA provides a seamless environment for running Android apps directly on Windows, offering a more efficient and integrated development experience. In this article, we'll explore how to leverage WSA with Flutter for Android development, highlighting its benefits and providing a step-by-step guide to get started.
 
-## <a name="Headings"></a>Headings
+## <a name="Headings"></a>Why WSA with Flutter?
 
-Sint sit cillum pariatur eiusmod nulla pariatur ipsum. Sit laborum anim qui mollit tempor pariatur nisi minim dolor. Aliquip et adipisicing sit sit fugiat commodo id sunt. Nostrud enim ad commodo incididunt cupidatat in ullamco ullamco Lorem cupidatat velit enim et Lorem. Ut laborum cillum laboris fugiat culpa sint irure do reprehenderit culpa occaecat. Exercitation esse mollit tempor magna aliqua in occaecat aliquip veniam reprehenderit nisi dolor in laboris dolore velit.
+Seamless Integration: WSA integrates seamlessly with Windows, allowing developers to run Android apps directly within their development environment without the need for external emulators.
 
-## Heading two
+- Performance: WSA offers improved performance compared to traditional emulators, leveraging the underlying Windows system resources efficiently.
+- Debugging Capabilities: With WSA, developers can easily debug their Flutter applications using familiar tools like Android Studio or Visual Studio Code.
+- Compatibility: WSA supports a wide range of Android APIs and features, ensuring compatibility with various Flutter plugins and packages.
+- Simplified Setup: Setting up WSA for Flutter development is straightforward and requires minimal configuration, making it accessible to developers of all skill levels.
 
-Aute officia nulla deserunt do deserunt cillum velit magna. Officia veniam culpa anim minim dolore labore pariatur voluptate id ad est duis quis velit dolor pariatur enim. Incididunt enim excepteur do veniam consequat culpa do voluptate dolor fugiat ad adipisicing sit. Labore officia est adipisicing dolore proident eiusmod exercitation deserunt ullamco anim do occaecat velit. Elit dolor consectetur proident sunt aliquip est do tempor quis aliqua culpa aute. Duis in tempor exercitation pariatur et adipisicing mollit irure tempor ut enim esse commodo laboris proident. Do excepteur laborum anim esse aliquip eu sit id Lorem incididunt elit irure ea nulla dolor et. Nulla amet fugiat qui minim deserunt enim eu cupidatat aute officia do velit ea reprehenderit.
+## Getting Started with WSA and Flutter:
 
-### Heading three
+### Prerequisites:
 
-Voluptate cupidatat cillum elit quis ipsum eu voluptate fugiat consectetur enim. Quis ut voluptate culpa ex anim aute consectetur dolore proident voluptate exercitation eiusmod. Esse in do anim magna minim culpa sint. Adipisicing ipsum consectetur proident ullamco magna sit amet aliqua aute fugiat laborum exercitation duis et.
+- Windows 11 installed on your system.
+- Windows Subsystem for Android enabled.
+- Flutter SDK installed on your machine.
+- A Text Editor or IDE for Flutter development (e.g., Visual Studio Code, Android Studio).
 
-#### Heading four
+#### Windows 11 install
 
-Commodo fugiat aliqua minim quis pariatur mollit id tempor. Non occaecat minim esse enim aliqua adipisicing nostrud duis consequat eu adipisicing qui. Minim aliquip sit excepteur ipsum consequat laborum pariatur excepteur. Veniam fugiat et amet ad elit anim laborum duis mollit occaecat et et ipsum et reprehenderit. Occaecat aliquip dolore adipisicing sint labore occaecat officia fugiat. Quis adipisicing exercitation exercitation eu amet est laboris sunt nostrud ipsum reprehenderit ullamco. Enim sint ut consectetur id anim aute voluptate exercitation mollit dolore magna magna est Lorem. Ut adipisicing adipisicing aliqua ullamco voluptate labore nisi tempor esse magna incididunt.
+Im going to assume you have Windows 11 installed on your system. If not, you can follow the official guide to install Windows 11 on your machine. WSA require Windows 11 or later to run, so make sure your system meets the minimum requirements, although there are ways to get it on Windows 10, it's not officially supported.
 
-##### Heading five
+But just in case you want to try it out on Windows 10, you can follow [this guide](https://github.com/MustardChef/WSABuilds). It also applies for Windows 11 users who cannot install WSA due to regional restrictions, you just dont want to use the amazon appstore method.
 
-Veniam enim esse amet veniam deserunt laboris amet enim consequat. Minim nostrud deserunt cillum consectetur commodo eu enim nostrud ullamco occaecat excepteur. Aliquip et ut est commodo enim dolor amet sint excepteur. Amet ad laboris laborum deserunt sint sunt aliqua commodo ex duis deserunt enim est ex labore ut. Duis incididunt velit adipisicing non incididunt adipisicing adipisicing. Ad irure duis nisi tempor eu dolor fugiat magna et consequat tempor eu ex dolore. Mollit esse nisi qui culpa ut nisi ex proident culpa cupidatat cillum culpa occaecat anim. Ut officia sit ea nisi ea excepteur nostrud ipsum et nulla.
+#### Enable Windows Subsystem for Android
 
-###### Heading six
+Open Settings on your Windows machine.
+Navigate to Apps > Apps & features > Optional features.
+Click on "Add a feature" and select "Windows Subsystem for Android" from the list.
+Follow the on-screen instructions to complete the installation.
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+#### Install Flutter
+
+Download and install the Flutter SDK from the official website (https://flutter.dev/docs/get-started/install).
+Add Flutter to your system path to access it from the command line.
+Create a New Flutter Project:
+
+Open your preferred terminal or command prompt.
+Run the following command to create a new Flutter project:
+
+```bash
+flutter create my_flutter_app
+## Navigate to the newly created project directory
+cd my_flutter_app
+
+```
+
+#### Installing A Text Editor or IDE for Flutter development 
+There's two popular options for this, you can either use Visual Studio Code or Android Studio. Both are great options, but Visual Studio Code is more lightweight and easier to set up, while Android Studio is more integrated and tailored specifically for Android development.
+
+Installing a text editor or IDE for Flutter development is a crucial step in setting up your development environment. 
+#### Visual Studio Code
+Download Visual Studio Code:
+
+Download the official installer at he  Visual Studio Code website at https://code.visualstudio.com/.
+Click on the "Download for Windows" button to d
+Install Visual Studio Code:
+
+Once the download is complete, locate the downloaded installer file (usually named something like VSCodeSetup.exe) in your downloads folder.
+Double-click on the installer file to begin the installation process.
+Follow the on-screen instructions provided by the installer.
+Choose the destination folder for the installation and any additional options as per your preference.
+Click "Install" to begin the installation process.
+Open Visual Studio Code:
+
+After the installation is complete, you can launch Visual Studio Code by double-clicking its icon on the desktop or by searching for "Visual Studio Code" in the Start menu.
+Install Flutter and Dart Extensions:
+
+Once Visual Studio Code is open, navigate to the Extensions view by clicking on the square icon on the sidebar or pressing Ctrl+Shift+X.
+In the search bar, type "Flutter" and press Enter.
+Look for the "Flutter" extension authored by the Flutter team and click on the "Install" button next to it. This extension provides Flutter-specific functionalities within Visual Studio Code.
+Similarly, search for "Dart" in the Extensions view and install the "Dart" extension, which provides support for the Dart programming language used in Flutter development.
+Configure Flutter SDK Path:
+
+After installing the Flutter extension, you'll need to specify the path to your Flutter SDK.
+Open the Command Palette by pressing Ctrl+Shift+P (Windows) or Cmd+Shift+P (Mac).
+Type "Flutter: Select Flutter SDK" and press Enter.
+Navigate to the folder where you have installed Flutter and select the Flutter SDK directory.
+Verify Installation:
+
+To verify that Flutter and Dart extensions are installed correctly, open a new terminal within Visual Studio Code by pressing `Ctrl+Shift+`` (backtick).
+Type flutter --version and press Enter to check the Flutter installation.
+Similarly, type dart --version and press Enter to verify the Dart installation.
+Once you've completed these steps, Visual Studio Code is set up for Flutter development, and you can start creating Flutter projects, writing code, and building apps directly within the IDE.
+
+
+Certainly! Android Studio is another popular choice for Flutter development, especially for developers who prefer an integrated environment tailored specifically for Android development. Here's how to install Android Studio for Flutter development:
+
+#### Android Studio
+Download Android Studio:
+
+Visit the official Android Studio website at https://developer.android.com/studio.
+Click on the "Download Android Studio" button.
+Install Android Studio:
+
+Once the download is complete, locate the downloaded installer file.
+Double-click on the installer file to start the installation process.
+Follow the on-screen instructions provided by the installer.
+Choose the installation options and components you want to install. Make sure to include Flutter and Dart plugins during installation by checking the respective boxes.
+Select the installation location on your system.
+Click "Install" to begin the installation process.
+Open Android Studio:
+
+After the installation is complete, launch Android Studio by double-clicking its icon on the desktop or by searching for "Android Studio" in the Start menu.
+Set up Flutter Plugin:
+
+Once Android Studio is open, go to "Configure" in the top menu, and select "Plugins".
+In the Plugins window, click on the "Marketplace" tab.
+Search for "Flutter" in the Marketplace search bar.
+Click on the "Install" button next to the "Flutter" plugin.
+Follow any additional instructions to complete the installation.
+Restart Android Studio to activate the Flutter plugin.
+Set up Flutter SDK Path:
+
+After installing the Flutter plugin, you need to specify the Flutter SDK path in Android Studio.
+Go to "File" > "Settings" (or "Android Studio" > "Preferences" on macOS).
+In the Settings/Preferences dialog, navigate to "Languages & Frameworks" > "Flutter".
+Click on the "Flutter SDK path" field and browse to the directory where you installed Flutter.
+Click "Apply" and then "OK" to save the settings.
+Verify Installation:
+
+To verify that Android Studio is set up correctly for Flutter development, open a new terminal within Android Studio.
+Type flutter --version and press Enter to check the Flutter installation.
+Similarly, type dart --version and press Enter to verify the Dart installation.
+Once you've completed these steps, Android Studio is ready for Flutter development, and you can start creating Flutter projects, writing code, and building apps directly within the IDE.
+
 
 [[Top]](#top)
 
