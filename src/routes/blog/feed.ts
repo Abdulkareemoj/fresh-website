@@ -26,7 +26,7 @@ export const handler: Handlers<Post[]> = {
       const item: FeedItem = {
         id: `${origin}/${post.title}`,
         title: post.title,
-        description: post.snippet,
+        description: post.description,
         date: post.publishDate,
         link: `${origin}/${post.slug}`,
         copyright,

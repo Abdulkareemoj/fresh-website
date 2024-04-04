@@ -6,13 +6,12 @@ import { join } from "https://deno.land/std@0.211.0/path/join.ts";
 import { parse as parseYAML } from "https://deno.land/std@0.219.0/yaml/parse.ts";
 
 const extractYAML = createExtractor({ yaml: parseYAML as Parser });
-const directory = `${Deno.cwd()}/posts`;
+const directory = `${Deno.cwd()}./posts`;
 
 export interface Post {
   slug: string;
   title: string;
   publishDate: Date;
-  snippet: string;
   content: string;
   description: string;
   image: string;
@@ -21,7 +20,6 @@ export interface Post {
 export interface FrontMatter {
   title: string;
   publishDate: string;
-  snippet: string;
   description: string;
   image: string;
 }
@@ -34,7 +32,7 @@ export async function getPosts(): Promise<Post[]> {
     const slug = file.name.replace(".md", "");
     promises.push(getPost(slug));
   }
-  const posts = await Promise.all(promises) as Post[];
+  const posts = (await Promise.all(promises)) as Post[];
   posts.sort((a, b) => b.publishDate.getTime() - a.publishDate.getTime());
   return posts;
 }
