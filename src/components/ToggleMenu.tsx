@@ -1,6 +1,6 @@
-import { IconMenu, IconX } from "@tabler/icons-react";
 import { ToggleMenuProps } from "~/shared/types";
-
+import IconMenu from "https://deno.land/x/tabler_icons_tsx@0.0.5/tsx/menu.tsx";
+import IconX from "https://deno.land/x/tabler_icons_tsx@0.0.5/tsx/x.tsx";
 const ToggleMenu = (
   { handleToggleMenuOnClick, isToggleMenuOpen }: ToggleMenuProps,
 ) => (
