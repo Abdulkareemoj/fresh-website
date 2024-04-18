@@ -1,5 +1,20 @@
 import { twMerge } from "tailwind-merge";
-import { CallToActionType, LinkOrButton } from "~/shared/types";
+
+type CallToActionType = {
+  text?: string;
+  href: string;
+  icon?: Icon;
+  targetBlank?: boolean;
+};
+
+type LinkOrButton = {
+  callToAction?: CallToActionType;
+  containerClass?: string;
+  linkClass?: string;
+  iconClass?: string;
+};
+
+type Icon = React.ComponentType<React.ComponentProps<"svg">>;
 
 const CTA = (
   { callToAction, containerClass, linkClass, iconClass }: LinkOrButton,
