@@ -1,6 +1,10 @@
-import { ToggleMenuProps } from "~/shared/types";
 import IconMenu from "https://deno.land/x/tabler_icons_tsx@0.0.5/tsx/menu.tsx";
 import IconX from "https://deno.land/x/tabler_icons_tsx@0.0.5/tsx/x.tsx";
+type ToggleMenuProps = {
+  handleToggleMenuOnClick: MouseEventHandler<HTMLButtonElement>;
+  isToggleMenuOpen: boolean;
+};
+
 const ToggleMenu = (
   { handleToggleMenuOnClick, isToggleMenuOpen }: ToggleMenuProps,
 ) => (

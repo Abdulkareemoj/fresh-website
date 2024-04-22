@@ -1,5 +1,6 @@
 import { Button } from "./Button.tsx";
 import { asset } from "$fresh/runtime.ts";
+
 import ToggleTheme from "./ToggleTheme.tsx";
 import ToggleMenu from "./ToggleMenu.tsx";
 import { useState } from "preact/hooks";
@@ -86,43 +87,6 @@ export default function Header() {
   };
   const { links, actions, isSticky, showToggleTheme, showRssFeed, position } =
     headerData;
-
-  const updatedIsDropdownOpen = links &&
-    links.map(() => {
-      return false;
-    });
-
-  const [isDropdownOpen, setIsDropdownOpen] = useState<boolean[]>(
-    updatedIsDropdownOpen as boolean[],
-  );
-
-  const [isToggleMenuOpen, setIsToggleMenuOpen] = useState<boolean>(false);
-
-  const handleDropdownOnClick = (index: number) => {
-    setIsDropdownOpen((prevValues) => {
-      const newValues = [...(prevValues as boolean[])];
-      newValues.forEach((value, i) => {
-        if (value === true) {
-          newValues[i] = false;
-        } else {
-          newValues[i] = i === index;
-        }
-      });
-      return newValues;
-    });
-  };
-
-  const handleCloseDropdownOnClick = (index: number) => {
-    setIsDropdownOpen((prevValues) => {
-      const newValues = [...(prevValues as boolean[])];
-      newValues[index] = false;
-      return newValues;
-    });
-  };
-
-  const handleToggleMenuOnClick = () => {
-    setIsToggleMenuOpen(!isToggleMenuOpen);
-  };
 
   return (
     // <div className="mx-auto w-full max-w-5xl py-3 px-3  md:py-3.5 md:px-4 dark:bg-slate-800">
