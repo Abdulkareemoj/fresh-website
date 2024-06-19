@@ -1,7 +1,7 @@
 import { useSignal } from "@preact/signals";
 
 interface DropdownProps {
-  links: Array<LinkType>;
+  links: Array<LinkStyle>;
 }
 
 export default function Dropdown({ links }: DropdownProps) {
@@ -17,7 +17,7 @@ export default function Dropdown({ links }: DropdownProps) {
   const [isToggleMenuOpen, setIsToggleMenuOpen] = useSignal<boolean>(false);
 
   const handleDropdownOnClick = (index: number) => {
-    setIsDropdownOpen((prevValues) => {
+    setIsDropdownOpen((prevValues: boolean[]) => {
       const newValues = [...(prevValues as boolean[])];
       newValues.forEach((value, i) => {
         if (value === true) {
@@ -31,7 +31,7 @@ export default function Dropdown({ links }: DropdownProps) {
   };
 
   const handleCloseDropdownOnClick = (index: number) => {
-    setIsDropdownOpen((prevValues) => {
+    setIsDropdownOpen((prevValues: boolean[]) => {
       const newValues = [...(prevValues as boolean[])];
       newValues[index] = false;
       return newValues;

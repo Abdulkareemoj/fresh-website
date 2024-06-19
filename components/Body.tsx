@@ -9,7 +9,7 @@ export default function Body() {
         Hi there, I&apos;m <strong>Abdulkareem</strong> aka
         <strong>{" "}WiZtEk</strong>. I&apos;m a dude with intrests in
         <strong>{" "}building things,</strong>{" "}
-        i guess i would describe myself as a fullstack developer/software
+        i guess i would describe myself as a Fullstack developer/Software
         engineer but thats because i like to understand all parts of a system to
         know how it works and if possible improve it. I enjoy{" "}
         <strong>game</strong> and <strong>web development</strong> and I use the

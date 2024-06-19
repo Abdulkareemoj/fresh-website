@@ -5,7 +5,7 @@ import { Head } from "$fresh/runtime.ts";
 
 export const handler: Handlers<Project[]> = {
   async GET(_req, ctx) {
-    const project = getProjects();
+    const project = await getProjects();
     return ctx.render(project);
   },
 };
@@ -20,9 +20,7 @@ export default function Projects(props: PageProps<Project[]>) {
         <title>WiZtEk • Projects</title>
       </Head>
       <div>
-        {projects.map((project) => (
-          <ProjectCard project={project} />
-        ))}
+        {projects.map((project) => <ProjectCard project={project} />)}
       </div>
     </>
   );
