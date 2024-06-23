@@ -1,7 +1,7 @@
 import { Handlers, PageProps } from "$fresh/server.ts";
 import { Head } from "$fresh/runtime.ts";
 import { PostCard } from "../../components/PostCard.tsx";
-import { getPost, getPosts, Post } from "../../utils/post.ts";
+import { getPosts, Post } from "../../utils/post.ts";
 
 export const handler: Handlers<Post[]> = {
   async GET(_req, ctx) {
@@ -22,9 +22,7 @@ export default function BlogIndexPage(props: PageProps<Post[]>) {
       <main className="max-w-screen-md px-4 pt-16 mx-auto">
         <h1 className="text-5xl font-bold text-center">Blog</h1>
         <div className="mt-8">
-          {posts.map((post) => (
-            <PostCard post={post} />
-          ))}
+          {posts.map((post) => <PostCard post={post} />)}
         </div>
       </main>
     </>

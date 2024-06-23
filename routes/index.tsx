@@ -1,27 +1,18 @@
 import Body from "../components/Body.tsx";
 import Projects from "../components/Project.tsx";
-import Blog from "../components/Blog.tsx";
 import { Head } from "$fresh/runtime.ts";
-export default function Home() {
-  // const count = useSignal(3);?
+import { Handlers, PageProps } from "$fresh/server.ts";
+import { getPosts, Post } from "../utils/post.ts";
+
+export const handler: Handlers<Post[]> = {
+  async GET(_req, ctx) {
+    const posts = await getPosts();
+    return ctx.render(posts);
+  },
+};
+export default function Home(props: PageProps<Post[]>) {
+  const posts = props.data;
   return (
-    // <div class="px-4 py-8 mx-auto bg-[#86efac]">
-    //   <div class="max-w-screen-md mx-auto flex flex-col items-center justify-center">
-    //     <img
-    //       class="my-6"
-    //       src="/logo.svg"
-    //       width="128"
-    //       height="128"
-    //       alt="the Fresh logo: a sliced lemon dripping with juice"
-    //     />
-    //     <h1 class="text-4xl font-bold">Welcome to Fresh</h1>
-    //     <p class="my-4">
-    //       Try updating this message in the
-    //       <code class="mx-2">./routes/index.tsx</code> file, and refresh.
-    //     </p>
-    //     <Counter count={count} />
-    //   </div>
-    // </div>
     <>
       <Head>
         <meta charset="utf-8" />
@@ -44,7 +35,13 @@ export default function Home() {
           <div className="mt-12"></div>
           <h2>Blog</h2>
 
-          {/* <Blog /> */}
+          <div className="flex flex-col gap-4">
+            {posts.map((post) => (
+              <a key={post.slug} href={`/blog/${post.slug}`}>
+                {post.title}
+              </a>
+            ))}
+          </div>
           <span>
             <a href="/blog">All posts →</a>
           </span>
