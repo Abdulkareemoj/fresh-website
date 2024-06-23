@@ -1,6 +1,6 @@
 ---
 title: "How to seed a Database with test Data for an App"
-publishDate: "2022-11-04"
+publishDate: "2024-02-04"
 description: "I was working on a personal project when i decided to test it out with real data but i realized that i couldnt type out and insert data for over a 100 samoles by hand, thats just not the Programer/SWE way to do things..."
 
 image: "an image for the blogs page"

@@ -39,7 +39,7 @@ export default function Projects() {
   ];
 
   return (
-    <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
+    <div className="py-3 grid grid-cols-2 gap-4 md:grid-cols-3">
       {projects.map((project) => (
         <div key={project.repo}>
           <a href={project.link}>{project.repo}</a>

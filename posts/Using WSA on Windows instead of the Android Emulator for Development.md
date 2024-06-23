@@ -1,6 +1,6 @@
 ---
 title: "Exploring WSA with Flutter for Android Development: A Comprehensive Guide"
-publishDate: "2020-04-04"
+publishDate: "2024-03-02"
 
 description: "Windows Subsystem for Android (WSA) provides a seamless environment for running Android apps directly on Windows, offering a more efficient and integrated development experience. In this guide, we'll explore how to leverage WSA with Flutter for Android development and provide a step-by-step guide to get started."
 image: "an image for the blogs page"
@@ -55,14 +55,17 @@ cd my_flutter_app
 
 ```
 
-#### Installing A Text Editor or IDE for Flutter development 
+#### Installing A Text Editor or IDE for Flutter development
+
 There's two popular options for this, you can either use Visual Studio Code or Android Studio. Both are great options, but Visual Studio Code is more lightweight and easier to set up, while Android Studio is more integrated and tailored specifically for Android development.
 
-Installing a text editor or IDE for Flutter development is a crucial step in setting up your development environment. 
+Installing a text editor or IDE for Flutter development is a crucial step in setting up your development environment.
+
 #### Visual Studio Code
+
 Download Visual Studio Code:
 
-Download the official installer at he  Visual Studio Code website at https://code.visualstudio.com/.
+Download the official installer at he Visual Studio Code website at https://code.visualstudio.com/.
 Click on the "Download for Windows" button to d
 Install Visual Studio Code:
 
@@ -93,10 +96,10 @@ Type flutter --version and press Enter to check the Flutter installation.
 Similarly, type dart --version and press Enter to verify the Dart installation.
 Once you've completed these steps, Visual Studio Code is set up for Flutter development, and you can start creating Flutter projects, writing code, and building apps directly within the IDE.
 
-
 Certainly! Android Studio is another popular choice for Flutter development, especially for developers who prefer an integrated environment tailored specifically for Android development. Here's how to install Android Studio for Flutter development:
 
 #### Android Studio
+
 Download Android Studio:
 
 Visit the official Android Studio website at https://developer.android.com/studio.
@@ -133,7 +136,6 @@ To verify that Android Studio is set up correctly for Flutter development, open 
 Type flutter --version and press Enter to check the Flutter installation.
 Similarly, type dart --version and press Enter to verify the Dart installation.
 Once you've completed these steps, Android Studio is ready for Flutter development, and you can start creating Flutter projects, writing code, and building apps directly within the IDE.
-
 
 [[Top]](#top)
 

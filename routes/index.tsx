@@ -25,17 +25,18 @@ export default function Home(props: PageProps<Post[]>) {
         </main>
         <section>
           <div className="mt-12"></div>
-          <h2 class="text-xl font-bold">Projects</h2>
+          <h2 class="text-xl font-bold py-4">Projects</h2>
 
           <Projects />
           <span>
-            <a class=" font-bold" href="/projects">All projects →</a>
+            <a class=" font-semibold" href="/projects">All projects →</a>
           </span>
+        </section>
+        <div className="mt-12"></div>
+        <section>
+          <h2 class="text-xl font-bold py-4">Blog</h2>
 
-          <div className="mt-12"></div>
-          <h2 class="text-xl font-bold">Blog</h2>
-
-          <div className="flex flex-col gap-4">
+          <div className="py-3 flex flex-col gap-4">
             {posts.map((post) => (
               <div class="flex justify-between">
                 <a key={post.slug} href={`/blog/${post.slug}`}>
@@ -52,7 +53,7 @@ export default function Home(props: PageProps<Post[]>) {
             ))}
           </div>
           <span>
-            <a class=" font-bold" href="/blog">All posts →</a>
+            <a class=" font-semibold" href="/blog">All posts →</a>
           </span>
         </section>
       </div>
