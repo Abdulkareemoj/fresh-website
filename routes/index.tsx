@@ -25,25 +25,34 @@ export default function Home(props: PageProps<Post[]>) {
         </main>
         <section>
           <div className="mt-12"></div>
-          <h2>Projects</h2>
+          <h2 class="text-xl font-bold">Projects</h2>
 
           <Projects />
           <span>
-            <a href="/projects">All projects →</a>
+            <a class=" font-bold" href="/projects">All projects →</a>
           </span>
 
           <div className="mt-12"></div>
-          <h2>Blog</h2>
+          <h2 class="text-xl font-bold">Blog</h2>
 
           <div className="flex flex-col gap-4">
             {posts.map((post) => (
-              <a key={post.slug} href={`/blog/${post.slug}`}>
-                {post.title}
-              </a>
+              <div class="flex justify-between">
+                <a key={post.slug} href={`/blog/${post.slug}`}>
+                  {post.title}
+                </a>
+                <time class="text-gray-500">
+                  {new Date(post.publishDate).toLocaleDateString("en-us", {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
+                  })}
+                </time>
+              </div>
             ))}
           </div>
           <span>
-            <a href="/blog">All posts →</a>
+            <a class=" font-bold" href="/blog">All posts →</a>
           </span>
         </section>
       </div>
