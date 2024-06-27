@@ -12,7 +12,7 @@ export default function Contact() {
         id="contact"
         class="lg:grid-cols-desktop grid scroll-mt-16 grid-cols-1 gap-x-10 gap-y-4"
       >
-        <h1 class="text-3xl font-bold uppercase">Contact</h1>
+        <h1 class="text-5xl font-bold text-center">Contact</h1>
         <div class="">
           <form action="/send" class="space-y-3 py-3">
             <div class="space-y-1">

@@ -49,7 +49,7 @@ export default function Uses({ data }: PageProps<Page | null>) {
         <title>WiZtEk • Uses</title>
       </Head>
       <main>
-        <div class="text-5xl bold pb-4">{data.title}</div>
+        <div class="text-5xl font-bold text-center pb-4">{data.title}</div>
         <div class="text-2xl pb-4">{data.description}</div>
         <div
           class="markdown-body"
