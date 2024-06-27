@@ -43,7 +43,7 @@ export default function Header() {
         </div>
         <div>
           <Button>
-            <a class="" href={asset("/resume.pdf")}>My CV</a>
+            <a class="" href={asset("/resume.pdf")}>Download CV</a>
           </Button>
           {/* <ToggleTheme /> */}
         </div>
