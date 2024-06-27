@@ -16,7 +16,7 @@ export default function Footer() {
         },
         {
           name: "Sitemap",
-          href: "/sitemap-index.xml",
+          href: "/sitemap.xml",
           icon: <IconSitemap className="w-2 h-2" />,
         },
         {
