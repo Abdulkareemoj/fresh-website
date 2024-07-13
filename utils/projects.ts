@@ -2,44 +2,80 @@ export interface Project {
   repo: string;
   link: string;
   description: string;
-  image: string;
+  image?: string;
 }
 
 export function getProjects() {
   return [
     {
-      repo: "app1",
-      link: "https://github.com/",
+      repo: "SalesManApp",
+      link: "https://github.com/Abdulkareemoj/SalesManApp",
       description: "",
       image: "",
     },
     {
-      repo: "app2",
-      link: "https://github.com/",
+      repo: "Node-React-TS-Docker Template",
+      link: "https://github.com/Abdulkareemoj/node-react-ts-docker",
       description: "",
       image: "",
     },
     {
-      repo: "app3",
-      link: "https://github.com/",
+      repo: "DonationsApp",
+      link: "https://github.com/Abdulkareemoj/DonationsApp",
       description: "",
       image: "",
     },
     {
-      repo: "app4",
-      link: "https://github.com/",
+      repo: "EasyBank Landing Page",
+      link: "https://github.com/Abdulkareemoj/easybank-landing-page",
       description: "",
       image: "",
     },
     {
-      repo: "app5",
-      link: "https://github.com/",
+      repo: "Strmr",
+      link: "https://github.com/Abdulkareemoj/Strmr",
       description: "",
       image: "",
     },
     {
-      repo: "app6",
-      link: "https://github.com/",
+      repo: "React Native Todo",
+      link: "https://github.com/Abdulkareemoj/rn-todo",
+      description: "",
+      image: "",
+    },
+    {
+      repo: "Strmr-rn",
+      link: "https://github.com/Abdulkareemoj/Strmr-rn",
+      description: "",
+      image: "",
+    },
+    {
+      repo: "REST API",
+      link: "https://github.com/Abdulkareemoj/REST-API",
+      description: "",
+      image: "",
+    },
+    {
+      repo: "Media DB",
+      link: "https://github.com/Abdulkareemoj/media-db",
+      description: "",
+      image: "",
+    },
+    {
+      repo: "URL Shortener",
+      link: "https://github.com/Abdulkareemoj/url-shortener-fementor",
+      description: "",
+      image: "",
+    },
+    {
+      repo: "Phoenix TodoList",
+      link: "https://github.com/Abdulkareemoj/phoenix-todolist",
+      description: "",
+      image: "",
+    },
+    {
+      repo: "Media DB",
+      link: "https://github.com/Abdulkareemoj/media-db",
       description: "",
       image: "",
     },
