@@ -34,6 +34,7 @@ export const handler: Handlers<Page> = {
     });
   },
 };
+
 export default function Uses({ data }: PageProps<Page | null>) {
   if (!data) {
     return <h1>File not found.</h1>;

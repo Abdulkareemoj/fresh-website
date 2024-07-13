@@ -6,32 +6,39 @@ published_at: "2020-11-22"
 
 ## Applications
 
+### Editors
+
 - [VS Code](https://code.visualstudio.com)
-  - [Karma theme](https://github.com/sreetamdas/karma) by yours truly!
-  - Previously: [Brackets](http://brackets.io),
-    [Sublime Text](https://www.sublimetext.com) and [Atom](https://atom.io)
-- [Spotify](https://open.spotify.com/user/22nkuerb2tgjpqwhy4tp4aecq?si=q0YnurxaQxiWIIvc7G4-ZA)
-- [Pocket Casts](https://www.pocketcasts.com)
-- [Figma](https://www.figma.com)
+  - [Dark Modern](https://github.com/sreetamdas/karma)
+  - [Catpuccin](https://github.com/sreetamdas/karma)
+- [Neovim](https://neovim.io) ~~I dont have any special configs for now, i just use nvimchad~~
+- Previously: [Atom](https://atom.io), [Apache NetBeans](https://atom.io)
+- [Visual Studio]()
+
+  ### Browsers
+
 - [Firefox](https://www.mozilla.org)
-  - [Chrome](https://www.google.com/chrome) for everything work related
-  - [Safari](https://www.apple.com/safari) to make sure whatever I build works
-    across browsers, and when I need to conserve my battery usage (Safari is
-    _incredibly_ battery-efficient)
-  - ~~[Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer)
-    for development/sandboxed work~~
-  - [Microsoft Edge](https://www.microsoft.com/en-us/edge) for development since
-    it's better at RAM usage than FDE
-- [Notion](https://www.notion.so) for task management, long-term planning and
+- [Arc](https://www.apple.com/safari) to make sure whatever I build works across browsers
+- [Microsoft Edge](https://www.microsoft.com/en-us/edge) for development since it's better at RAM usage
+
+  ### Notetaking
+
+- [Sticky Notes](https://www.notion.so) for task management, long-term planning and
   notes
-- [Obsidian](https://obsidian.md) for quick notes, mind-mapping and managing my
+- [Microsoft OneNote](https://obsidian.md) for quick notes, mind-mapping and managing my
   newsletter
-- [Discord](https://discord.com)
-- [Insomnia](https://insomnia.rest)
-- [Cron](https://cron.app) for managing calendars and quick scheduling
-- [iTerm2](https://iterm2.com) with [Oh my Zsh](https://ohmyz.sh) and
-  [Starship](https://starship.rs)
-- [Iosevka font](https://typeof.net/Iosevka)
+
+### Developer Tools
+
+- [Hoppscotch](https://hoppscotch.io)
+- [Windows Terminal](https://iterm2.com) with [The New Powershell](https://ohmyz.sh)
+- [WSL with Kali Linux](https://)
+- [Hack Font](https://typeof.net/Iosevka)
+- [Figma](https://www.figma.com) ~~But [Penpot](https://www.figma.com) when possible~~
+
+  ### Misc
+
+- [Youtube Music]()
 
 ## Helper apps
 
