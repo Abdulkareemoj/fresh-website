@@ -1,5 +1,4 @@
 import Body from "../components/Body.tsx";
-import Projects from "../components/Project.tsx";
 import { Head } from "$fresh/runtime.ts";
 import { Handlers, PageProps } from "$fresh/server.ts";
 import { getPosts, Post } from "../utils/post.ts";
@@ -10,6 +9,47 @@ export const handler: Handlers<Post[]> = {
     return ctx.render(posts);
   },
 };
+const projects = [{
+  repo: "SalesManApp",
+  link: "https://github.com/Abdulkareemoj/SalesManApp",
+  description: "",
+  image: "",
+}, {
+  repo: "Node-React-TS-Docker Template",
+  link: "https://github.com/Abdulkareemoj/node-react-ts-docker",
+  description: "",
+  image: "",
+}, {
+  repo: "DonationsApp",
+  link: "https://github.com/Abdulkareemoj/DonationsApp",
+  description: "",
+  image: "",
+}, {
+  repo: "EasyBank Landing Page",
+  link: "https://github.com/Abdulkareemoj/easybank-landing-page",
+  description: "",
+  image: "",
+}, {
+  repo: "Strmr",
+  link: "https://github.com/Abdulkareemoj/Strmr",
+  description: "",
+  image: "",
+}, {
+  repo: "React Native Todo",
+  link: "https://github.com/Abdulkareemoj/rn-todo",
+  description: "",
+  image: "",
+}, {
+  repo: "Strmr-rn",
+  link: "https://github.com/Abdulkareemoj/Strmr-rn",
+  description: "",
+  image: "",
+}, {
+  repo: "REST API",
+  link: "https://github.com/Abdulkareemoj/REST-API",
+  description: "",
+  image: "",
+}];
 export default function Home(props: PageProps<Post[]>) {
   const posts = props.data;
   return (
@@ -26,8 +66,14 @@ export default function Home(props: PageProps<Post[]>) {
         <section>
           <div className="mt-12"></div>
           <h2 class="text-xl font-bold py-4">Projects</h2>
-
-          <Projects />
+          <div className="py-3 grid grid-cols-2 gap-4 md:grid-cols-3">
+            {projects.map((project) => (
+              <div key={project.repo}>
+                <a href={project.link}>{project.repo}</a>
+                <p>{project.description}</p>
+              </div>
+            ))}
+          </div>
           <span>
             <a class=" font-semibold" href="/projects">All projects →</a>
           </span>
