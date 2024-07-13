@@ -21,8 +21,12 @@ export default function Projects(props: PageProps<Project[]>) {
       </Head>
       <main className="max-w-screen-md px-4 pt-16 mx-auto">
         <h1 className="text-5xl font-bold text-center">Projects</h1>
-        <div className="mt-8">
-          {projects.map((project) => <ProjectCard project={project} />)}
+        <div className="flex flex-wrap mt-8">
+          {projects.map((project) => (
+            <div className="w-full md:w-1/2 px-2 mb-4">
+              <ProjectCard project={project} />
+            </div>
+          ))}
         </div>
       </main>
     </>

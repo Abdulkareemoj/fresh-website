@@ -12,42 +12,50 @@ export const handler: Handlers<Post[]> = {
 const projects = [{
   repo: "SalesManApp",
   link: "https://github.com/Abdulkareemoj/SalesManApp",
-  description: "",
+  description:
+    "lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, quae.",
   image: "",
 }, {
   repo: "Node-React-TS-Docker Template",
   link: "https://github.com/Abdulkareemoj/node-react-ts-docker",
-  description: "",
+  description:
+    "lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, quae.",
   image: "",
 }, {
   repo: "DonationsApp",
   link: "https://github.com/Abdulkareemoj/DonationsApp",
-  description: "",
+  description:
+    "lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, quae.",
   image: "",
 }, {
   repo: "EasyBank Landing Page",
   link: "https://github.com/Abdulkareemoj/easybank-landing-page",
-  description: "",
+  description:
+    "lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, quae.",
   image: "",
 }, {
   repo: "Strmr",
   link: "https://github.com/Abdulkareemoj/Strmr",
-  description: "",
+  description:
+    "lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, quae.",
   image: "",
 }, {
   repo: "React Native Todo",
   link: "https://github.com/Abdulkareemoj/rn-todo",
-  description: "",
+  description:
+    "lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, quae.",
   image: "",
 }, {
   repo: "Strmr-rn",
   link: "https://github.com/Abdulkareemoj/Strmr-rn",
-  description: "",
+  description:
+    "lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, quae.",
   image: "",
 }, {
   repo: "REST API",
   link: "https://github.com/Abdulkareemoj/REST-API",
-  description: "",
+  description:
+    "lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, quae.",
   image: "",
 }];
 export default function Home(props: PageProps<Post[]>) {
