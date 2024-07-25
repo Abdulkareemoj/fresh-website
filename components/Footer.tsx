@@ -48,7 +48,9 @@ export default function Footer() {
       <hr />
 
       <footer className="flex justify-between m-2">
-        <span>WiZtEk</span>
+        <span className="font-semibold">
+          WiZtEk
+        </span>
 
         <div className="flex ">
           {menus.map((item, index) => (
