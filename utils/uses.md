@@ -15,18 +15,16 @@ published_at: "2020-11-22"
 - Previously: [Atom](https://atom.io), [Apache NetBeans](https://atom.io)
 - [Visual Studio]()
 
-  ### Browsers
+### Browsers
 
 - [Firefox](https://www.mozilla.org)
 - [Arc](https://www.apple.com/safari) to make sure whatever I build works across browsers
 - [Microsoft Edge](https://www.microsoft.com/en-us/edge) for development since it's better at RAM usage
 
-  ### Notetaking
+### Notetaking
 
-- [Sticky Notes](https://www.notion.so) for task management, long-term planning and
-  notes
-- [Microsoft OneNote](https://obsidian.md) for quick notes, mind-mapping and managing my
-  newsletter
+- [Sticky Notes](https://www.notion.so) for task management, long-term planning and notes
+- [Microsoft OneNote](https://obsidian.md) for quick notes, mind-mapping and managing my newsletter
 
 ### Developer Tools
 
@@ -36,7 +34,7 @@ published_at: "2020-11-22"
 - [Hack Font](https://typeof.net/Iosevka)
 - [Figma](https://www.figma.com) ~~But [Penpot](https://www.figma.com) when possible~~
 
-  ### Misc
+### Misc
 
 - [Youtube Music]()
 
