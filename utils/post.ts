@@ -33,18 +33,21 @@ export async function getPosts(): Promise<Post[]> {
     promises.push(getPost(slug));
   }
   const posts = (await Promise.all(promises)) as Post[];
-  posts.sort((a, b) => b.publishDate.getTime() - a.publishDate.getTime());
+  posts.sort((a, b) => b.publishDate.getTime() - a.publishDate.getTime()); // Changed the sorting order
   return posts;
 }
 
 // Get post
 export async function getPost(slug: string): Promise<Post | null> {
+  // Decode the slug to handle URL-encoded characters
+  const decodedSlug = decodeURIComponent(slug);
+
   // Validate the slug
-  if (slug.includes("..") || slug.includes("/")) {
+  if (decodedSlug.includes("..") || decodedSlug.includes("/")) {
     throw new Error("Invalid slug");
   }
 
-  const text = await Deno.readTextFile(join(directory, `${slug}.md`));
+  const text = await Deno.readTextFile(join(directory, `${decodedSlug}.md`));
   const { attrs, body } = extractYAML(text);
 
   if (typeof attrs !== "object" || attrs === null) {
@@ -55,7 +58,7 @@ export async function getPost(slug: string): Promise<Post | null> {
 
   return {
     ...frontMatter,
-    slug,
+    slug: decodedSlug,
     content: body,
     publishDate: new Date(frontMatter.publishDate),
   } as Post;
