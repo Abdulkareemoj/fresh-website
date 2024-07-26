@@ -47,7 +47,7 @@ export default function Footer() {
     <div className="prose">
       <hr />
 
-      <footer className="flex justify-between m-2">
+      <footer className="flex justify-items justify-between m-2">
         <span className="font-semibold">
           WiZtEk
         </span>
