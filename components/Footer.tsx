@@ -35,7 +35,7 @@ export default function Footer() {
           icon: <IconBrandLinkedin className="w-2 h-2" />,
         },
         {
-          name: "Twitter",
+          name: "X",
           href: "https://x.com/abdulkareemoj",
           icon: <IconBrandXFilled className="w-2 h-2" />,
         },
