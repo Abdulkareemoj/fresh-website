@@ -85,49 +85,45 @@ export function getProjects() {
 export const projects = [{
   repo: "SalesManApp",
   link: "https://github.com/Abdulkareemoj/SalesManApp",
-  description:
-    "lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, quae.",
+  description: "A Sales Management App built with NextJS, Shadcn and Supabase.",
   image: "",
 }, {
   repo: "Node-React-TS-Docker Template",
   link: "https://github.com/Abdulkareemoj/node-react-ts-docker",
   description:
-    "lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, quae.",
+    "A Dockerized Node and React Template application, with everything from session, authentication, routes, user management and setup.",
   image: "",
 }, {
   repo: "DonationsApp",
   link: "https://github.com/Abdulkareemoj/DonationsApp",
   description:
-    "lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, quae.",
+    "A buymea coffe/ko-fi clone built with NextJS, Shadcn and Airtable.",
   image: "",
 }, {
   repo: "EasyBank Landing Page",
   link: "https://github.com/Abdulkareemoj/easybank-landing-page",
-  description:
-    "lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, quae.",
+  description: "A Simple Landing Page Built with HTML, SCSS and JS.",
   image: "",
 }, {
   repo: "Strmr",
   link: "https://github.com/Abdulkareemoj/Strmr",
-  description:
-    "lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, quae.",
-  image: "",
+  description: ".",
+  image:
+    "A Video Stremaing Website like youtube or vimeo where users can upload videos and shorts",
 }, {
   repo: "React Native Todo",
   link: "https://github.com/Abdulkareemoj/rn-todo",
-  description:
-    "lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, quae.",
+  description: "A To-Do app written in React-Native with Expo.",
   image: "",
 }, {
   repo: "Strmr-rn",
   link: "https://github.com/Abdulkareemoj/Strmr-rn",
-  description:
-    "lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, quae.",
+  description: "Mobile app for Strmr written with React Native.",
   image: "",
 }, {
   repo: "REST API",
   link: "https://github.com/Abdulkareemoj/REST-API",
   description:
-    "lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, quae.",
+    "A Nodejs REST API project with sessions, authentication, routes, user management setup.",
   image: "",
 }];

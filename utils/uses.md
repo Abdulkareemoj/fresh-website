@@ -33,6 +33,7 @@ published_at: "2020-11-22"
 - [WSL with Kali Linux](https://)
 - [Hack Font](https://typeof.net/Iosevka)
 - [Figma](https://www.figma.com) ~~But [Penpot](https://www.figma.com) when possible~~
+-
 
 ### Misc
 
@@ -40,28 +41,10 @@ published_at: "2020-11-22"
 
 ## Helper apps
 
-- [Brew](https://brew.sh) _the_ package manager for macOS
-- [Amphetamine](https://apps.apple.com/us/app/amphetamine/id937984704?mt=12)
-  super useful when you want to prevent your system from falling asleep
-- ~~[Rocket](https://matthewpalmer.net/rocket) emojis, everywhere!~~
-- ~~[Alfred](https://www.alfredapp.com) a much better Spotlight~~
-- ~~[Maccy](https://maccy.app) for lack of better words, a copy-paste manager?
-  allows you to search through your historical copy-s, super helpful~~
-- ~~[Rectangle](https://rectangleapp.com) a window manager; I love that I can
-  arrange my windows exactly how I want using just keyboard shortcuts~~
-- [Raycast](https://www.raycast.com) a better alternative for a growing list of
-  apps like: Spotlight/Alfred, Maccy, Rectangle and Rocket.
-- [Flux](https://justgetflux.com) helps dim/yellow/orange your screen down when
-  it starts to get late at night
-- [Muzzle](https://muzzleapp.com) prevent notifications from popping up when
-  you're sharing your screen
-- [1Password](https://1password.com) password manager which really checks off
-  all the right boxes
-- [Pock](https://pock.dev) make your touchbar actually useful
-- [Unsplash](https://unsplash.com) regularly changing wallpapers of absolutely
-  wow quality
-- [Karabiner-Elements](https://karabiner-elements.pqrs.org) Keyboard customizer
-  with Caps Lock enhancement
+- [WinGetUI](https://brew.sh) all in one package manager for windows
+- [Bitwarden](https://1password.com) password manager which really checks off all the right boxes
+- [Barrier](https://1password.com) software KVM that allows to share a mouse and keyboard over a network
+-
 
 ## VS Code Extensions
 
@@ -79,7 +62,7 @@ extensions that I use with [VS Code](https://code.visualstudio.com) are:
   them in a tree view. 🌳
 - [Karma](/karma) Duh.
 
-## Equipment
+<!-- ## Equipment
 
 - M1 MacBook Pro 13" 2020
 - [Dell UltraSharp 27" 4K USB-C Monitor](https://www.dell.com/en-us/work/shop/dell-ultrasharp-27-4k-usb-c-monitor-u2720q/apd/210-avjv/monitors-monitor-accessories)
@@ -90,8 +73,8 @@ extensions that I use with [VS Code](https://code.visualstudio.com) are:
 - [AirPods Pro 2nd generation](https://www.apple.com/airpods-pro/)
 - [Marshall Acton II](https://www.marshallheadphones.com/in/en/acton-ii-bluetooth.html)
 - [Logitech C925e Webcam](https://www.logitech.com/en-us/products/webcams/c925e-business-webcam.960-001075.html?crid=34)
-- [Oculus Quest 2](https://www.oculus.com/quest-2)
+- [Oculus Quest 2](https://www.oculus.com/quest-2) -->
 
 ## OSes
 
-- I use Windows 11 and Kubuntu whatever latest LTS is available side by side
+- I use Windows 11 and Kubuntu whatever latest LTS is available side by side on two separate computers but theyre connected with Barrier

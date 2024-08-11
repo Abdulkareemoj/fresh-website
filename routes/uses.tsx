@@ -39,7 +39,7 @@ export default function Uses({ data }: PageProps<Page | null>) {
   if (!data) {
     return <h1>File not found.</h1>;
   }
-  console.log(data);
+  // console.log(data);
 
   return (
     <>
