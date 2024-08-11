@@ -91,3 +91,7 @@ extensions that I use with [VS Code](https://code.visualstudio.com) are:
 - [Marshall Acton II](https://www.marshallheadphones.com/in/en/acton-ii-bluetooth.html)
 - [Logitech C925e Webcam](https://www.logitech.com/en-us/products/webcams/c925e-business-webcam.960-001075.html?crid=34)
 - [Oculus Quest 2](https://www.oculus.com/quest-2)
+
+## OSes
+
+- I use Windows 11 and Kubuntu whatever latest LTS is available side by side
