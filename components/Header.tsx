@@ -43,12 +43,12 @@ export default function Header() {
             ))}
           </div>
 
-          <div>
+          {/* <div>
             <Button>
               <a class="" href={asset("/resume.pdf")}>Download CV</a>
             </Button>
             {/* <ToggleTheme /> */}
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
