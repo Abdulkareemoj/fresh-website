@@ -16,8 +16,7 @@ import * as $index from "./routes/index.tsx";
 import * as $projects from "./routes/projects.tsx";
 import * as $uses from "./routes/uses.tsx";
 import * as $Counter from "./islands/Counter.tsx";
-import * as $Dropdown from "./islands/Dropdown.tsx";
-import * as $ToggleTheme from "./islands/ToggleTheme.tsx";
+import * as $Header2 from "./islands/Header2.tsx";
 import { type Manifest } from "$fresh/server.ts";
 
 const manifest = {
@@ -38,8 +37,7 @@ const manifest = {
   },
   islands: {
     "./islands/Counter.tsx": $Counter,
-    "./islands/Dropdown.tsx": $Dropdown,
-    "./islands/ToggleTheme.tsx": $ToggleTheme,
+    "./islands/Header2.tsx": $Header2,
   },
   baseUrl: import.meta.url,
 } satisfies Manifest;
