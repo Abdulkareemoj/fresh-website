@@ -17,6 +17,7 @@ import * as $projects from "./routes/projects.tsx";
 import * as $uses from "./routes/uses.tsx";
 import * as $Counter from "./islands/Counter.tsx";
 import * as $Header from "./islands/Header.tsx";
+import * as $ToggleDarkMode from "./islands/ToggleDarkMode.tsx";
 import { type Manifest } from "$fresh/server.ts";
 
 const manifest = {
@@ -38,6 +39,7 @@ const manifest = {
   islands: {
     "./islands/Counter.tsx": $Counter,
     "./islands/Header.tsx": $Header,
+    "./islands/ToggleDarkMode.tsx": $ToggleDarkMode,
   },
   baseUrl: import.meta.url,
 } satisfies Manifest;
