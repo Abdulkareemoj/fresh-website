@@ -16,7 +16,7 @@ import * as $index from "./routes/index.tsx";
 import * as $projects from "./routes/projects.tsx";
 import * as $uses from "./routes/uses.tsx";
 import * as $Counter from "./islands/Counter.tsx";
-import * as $Header2 from "./islands/Header2.tsx";
+import * as $Header from "./islands/Header.tsx";
 import { type Manifest } from "$fresh/server.ts";
 
 const manifest = {
@@ -37,7 +37,7 @@ const manifest = {
   },
   islands: {
     "./islands/Counter.tsx": $Counter,
-    "./islands/Header2.tsx": $Header2,
+    "./islands/Header.tsx": $Header,
   },
   baseUrl: import.meta.url,
 } satisfies Manifest;
