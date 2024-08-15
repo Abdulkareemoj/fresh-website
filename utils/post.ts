@@ -6,7 +6,8 @@ import { join } from "https://deno.land/std@0.211.0/path/join.ts";
 import { parse as parseYAML } from "https://deno.land/std@0.219.0/yaml/parse.ts";
 
 const extractYAML = createExtractor({ yaml: parseYAML as Parser });
-const directory = `${Deno.cwd()}./posts`;
+// Updated path construction
+const directory = join(Deno.cwd(), "posts");
 
 export interface Post {
   slug: string;
@@ -26,12 +27,18 @@ export interface FrontMatter {
 
 // Get posts
 export async function getPosts(): Promise<Post[]> {
-  const files = Deno.readDir(directory);
   const promises = [];
-  for await (const file of files) {
-    const slug = file.name.replace(".md", "");
-    promises.push(getPost(slug));
+  try {
+    // Use an array to accumulate all files
+    for await (const file of Deno.readDir(directory)) {
+      const slug = file.name.replace(".md", "");
+      promises.push(getPost(slug));
+    }
+  } catch (e) {
+    console.error(`Error reading directory: ${e.message}`);
+    throw e;
   }
+
   const posts = (await Promise.all(promises)) as Post[];
   posts.sort((a, b) => b.publishDate.getTime() - a.publishDate.getTime()); // Changed the sorting order
   return posts;
@@ -47,7 +54,16 @@ export async function getPost(slug: string): Promise<Post | null> {
     throw new Error("Invalid slug");
   }
 
-  const text = await Deno.readTextFile(join(directory, `${decodedSlug}.md`));
+  const filePath = join(directory, `${decodedSlug}.md`);
+  let text: string;
+
+  try {
+    text = await Deno.readTextFile(filePath);
+  } catch (e) {
+    console.error(`Error reading file ${filePath}: ${e.message}`);
+    throw e;
+  }
+
   const { attrs, body } = extractYAML(text);
 
   if (typeof attrs !== "object" || attrs === null) {

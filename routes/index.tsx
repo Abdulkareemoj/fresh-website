@@ -3,6 +3,7 @@ import { Head } from "$fresh/runtime.ts";
 import { Handlers, PageProps } from "$fresh/server.ts";
 import { getPosts, Post } from "../utils/post.ts";
 import { projects } from "../utils/projects.ts";
+
 export const handler: Handlers<Post[]> = {
   async GET(_req, ctx) {
     const posts = await getPosts();
