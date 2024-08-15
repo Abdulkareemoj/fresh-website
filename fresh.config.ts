@@ -7,12 +7,15 @@ export default defineConfig({
     tailwind(),
     freshSEOPlugin(manifest, {
       include: [
-        "/blog",
+        "/blog/index",
+        "/blog/[slug]",
+        "/blog/404",
+
         "/projects",
         "/contact",
         "/uses",
         "/404",
-        "index",
+        "/index",
       ],
     }),
   ],
