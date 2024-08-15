@@ -1,33 +1,42 @@
 import { useState } from "preact/hooks";
 import ToggleMenu from "../components/ToggleMenu.tsx";
+import CTA from "../components/CTA.tsx";
+import ToggleDarkMode from "./ToggleDarkMode.tsx";
 
-export interface HeaderProps {
+type Icon = string;
+
+type HeaderProps = {
     links?: Array<MenuLink>;
-    //   actions?: Array<CallToAction>;
+    actions?: Array<CallToActionType>;
     // actions?: Array<ActionLink>;
     isSticky?: boolean;
     showToggleTheme?: boolean;
     showRssFeed?: boolean;
     position?: "center" | "right" | "left";
-}
-
-export interface MenuLink extends Link {
+};
+interface MenuLink extends Link {
     links?: Array<Link>;
 }
-
+type CallToActionType = {
+    text?: string;
+    href: string;
+    icon?: Icon;
+    targetBlank?: boolean;
+};
 // interface CallToAction {
-//   text: string;
-//   href: string;
-//   icon?: Function;
-//   targetBlank?: boolean;
-//   btnText?: "uppercase" | "capitalize";
-//   btnType?: "primary" | "secondary";
+//     text: string;
+//     href: string;
+//     icon?: Icon;
+//     targetBlank?: boolean;
+//     btnText?: "uppercase" | "capitalize";
+//     btnType?: "primary" | "secondary";
 // }
 
-export interface Link {
+interface Link {
     label?: string;
     href?: string;
     ariaLabel?: string;
+    icon?: Icon;
 }
 
 export const headerData: HeaderProps = {
@@ -56,7 +65,7 @@ export const headerData: HeaderProps = {
     position: "right",
 };
 export default function Header() {
-    const { links, isSticky, showToggleTheme, position } = headerData;
+    const { links, actions, isSticky, showToggleTheme, position } = headerData;
 
     const updatedIsDropdownOpen = links && links.map(() => false);
 
@@ -210,6 +219,21 @@ export default function Header() {
                         isToggleMenuOpen ? "block" : "hidden"
                     } fixed bottom-0 left-0 w-full justify-end p-3 md:static md:mb-0 md:flex md:w-auto md:self-center md:p-0`}
                 >
+                    <div className="flex w-full items-center justify-between md:w-auto">
+                        {showToggleTheme && <ToggleDarkMode />}
+
+                        {actions && actions.length > 0 && (
+                            <div className="ml-4 rtl:ml-0 rtl:mr-4 flex w-max flex-wrap justify-end">
+                                {actions.map((callToAction, index) => (
+                                    <CTA
+                                        key={`item-action-${index}`}
+                                        callToAction={callToAction as CallToActionType}
+                                        linkClass="btn btn-primary m-1 py-2 px-5 text-sm font-semibold shadow-none md:px-6"
+                                    />
+                                ))}
+                            </div>
+                        )}
+                    </div>
                 </div>
             </div>
         </header>
