@@ -18,7 +18,7 @@ import * as $uses from "./routes/uses.tsx";
 import * as $Counter from "./islands/Counter.tsx";
 import * as $Header from "./islands/Header.tsx";
 import * as $ToggleDarkMode from "./islands/ToggleDarkMode.tsx";
-import { type Manifest } from "$fresh/server.ts";
+import type { Manifest } from "$fresh/server.ts";
 
 const manifest = {
   routes: {

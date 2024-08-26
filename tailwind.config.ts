@@ -14,4 +14,5 @@ export default {
       },
     },
   },
+  darkMode: "class",
 } satisfies Config;

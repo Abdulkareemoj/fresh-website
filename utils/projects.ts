@@ -97,7 +97,7 @@ export const projects = [{
   repo: "DonationsApp",
   link: "https://github.com/Abdulkareemoj/DonationsApp",
   description:
-    "A buymea coffe/ko-fi clone built with NextJS, Shadcn and Airtable.",
+    "A buyme-a-coffe/ko-fi clone built with NextJS, Shadcn and Airtable.",
   image: "",
 }, {
   repo: "EasyBank Landing Page",
@@ -107,9 +107,9 @@ export const projects = [{
 }, {
   repo: "Strmr",
   link: "https://github.com/Abdulkareemoj/Strmr",
-  description: ".",
-  image:
-    "A Video Stremaing Website like youtube or vimeo where users can upload videos and shorts",
+  description:
+    "A Video Streaming Website like youtube or vimeo where users can upload videos and shorts",
+  image: "",
 }, {
   repo: "React Native Todo",
   link: "https://github.com/Abdulkareemoj/rn-todo",

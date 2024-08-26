@@ -58,7 +58,13 @@ export const headerData: HeaderProps = {
             href: "/uses",
         },
     ],
-
+    actions: [
+        {
+            text: "Download CV",
+            href: "/static/resume.pdf",
+            targetBlank: true,
+        },
+    ],
     isSticky: true,
     showToggleTheme: true,
     showRssFeed: false,
@@ -102,7 +108,7 @@ export default function Header() {
 
     return (
         <header
-            className={`top-0 z-40 mx-auto w-full flex-none bg-white transition-all duration-100 ease-in  md:bg-white/90 md:backdrop-blur-sm  ${
+            className={`top-0 z-40 mx-auto w-full flex-none bg-white transition-all duration-100 ease-in md:bg-white/90 md:backdrop-blur-sm dark:bg-gray-900 dark:md:bg-gray-800/90 dark:md:backdrop-blur-sm ${
                 isSticky ? "sticky" : "relative"
             }`}
             id="header"
@@ -119,7 +125,7 @@ export default function Header() {
                                     updatedIsDropdownOpen as boolean[],
                                 )}
                     >
-                        <span className="ml-2 self-center whitespace-nowrap text-2xl font-bold text-gray-900  md:text-xl">
+                        <span className="ml-2 self-center whitespace-nowrap text-2xl font-bold text-gray-900 dark:text-white md:text-xl">
                             Welcome
                         </span>
                     </a>
@@ -142,7 +148,7 @@ export default function Header() {
                     } w-auto overflow-y-auto md:mx-5 md:flex md:h-auto md:items-center md:overflow-visible`}
                     aria-label="Main navigation"
                 >
-                    <ul className="flex w-full flex-col pt-8 text-xl md:w-auto md:flex-row md:self-center md:pt-0 md:text-base">
+                    <ul className="flex w-full flex-col pt-8 text-xl dark:text-white md:w-auto md:flex-row md:self-center md:pt-0 md:text-base">
                         {links &&
                             links.map(({ label, href, links }, index) => (
                                 <li
@@ -153,7 +159,7 @@ export default function Header() {
                                         ? (
                                             <>
                                                 <button
-                                                    className="flex items-center px-4 py-3 font-medium transition duration-150 ease-in-out hover:text-gray-900 "
+                                                    className="flex items-center px-4 py-3 font-medium transition duration-150 ease-in-out hover:text-gray-900 dark:hover:text-gray-300"
                                                     onClick={() =>
                                                         handleDropdownOnClick(
                                                             index,
@@ -167,7 +173,7 @@ export default function Header() {
                                                         isDropdownOpen[index]
                                                             ? "block"
                                                             : "md:hidden"
-                                                    } rounded pl-4 font-medium drop-shadow-xl md:absolute md:min-w-[200px] md:bg-white/90 md:pl-0 md:backdrop-blur-md`}
+                                                    } rounded pl-4 font-medium drop-shadow-xl md:absolute md:min-w-[200px] md:bg-white/90 md:pl-0 md:backdrop-blur-md dark:md:bg-gray-800/90`}
                                                 >
                                                     {links.map((
                                                         {
@@ -180,7 +186,7 @@ export default function Header() {
                                                             key={`item-link-${index2}`}
                                                         >
                                                             <a
-                                                                className="whitespace-no-wrap block py-2 px-5 first:rounded-t last:rounded-b md:hover:bg-gray-200"
+                                                                className="whitespace-no-wrap block py-2 px-5 first:rounded-t last:rounded-b md:hover:bg-gray-200 dark:md:hover:bg-gray-700"
                                                                 href={href2 as string}
                                                                 onClick={() =>
                                                                     isToggleMenuOpen
@@ -198,7 +204,7 @@ export default function Header() {
                                         )
                                         : (
                                             <a
-                                                className="flex items-center px-4 py-3 font-medium transition duration-150 ease-in-out hover:text-gray-900"
+                                                className="flex items-center px-4 py-3 font-medium transition duration-150 ease-in-out hover:text-gray-900 dark:hover:text-gray-300"
                                                 href={href as string}
                                                 onClick={() =>
                                                     isToggleMenuOpen

@@ -19,14 +19,12 @@ export default function Projects(props: PageProps<Project[]>) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>WiZtEk • Projects</title>
       </Head>
-      <main className="max-w-screen-md px-4 pt-16 mx-auto">
-        <h1 className="text-5xl font-bold text-center">Projects</h1>
-        <div className="flex flex-wrap mt-8">
-          {projects.map((project) => (
-            <div className="w-full md:w-1/2 px-2 mb-4">
-              <ProjectCard project={project} />
-            </div>
-          ))}
+      <main className="max-w-screen-md px-4 pt-16 mx-auto dark:bg-gray-900 dark:text-white">
+        <h1 className="text-5xl font-bold text-center dark:text-white">
+          Projects
+        </h1>
+        <div className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {projects.map((project) => <ProjectCard project={project} />)}
         </div>
       </main>
     </>

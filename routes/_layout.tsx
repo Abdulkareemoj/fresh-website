@@ -7,9 +7,11 @@ export default function Layout({ Component }: PageProps) {
   return (
     <>
       <Header />
-      <main className="mx-auto max-w-3xl px-6 py-12 sm:px-6 sm:py-10 lg:py-10">
-        <Component />
-        <Footer />
+      <main className="bg-white dark:bg-gray-900">
+        <div className="mx-auto max-w-3xl px-6 py-12 sm:px-6 sm:py-10 lg:py-10 dark:bg-gray-900 dark:text-white">
+          <Component />
+          <Footer />
+        </div>
       </main>
     </>
   );
