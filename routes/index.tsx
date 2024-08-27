@@ -20,7 +20,7 @@ export default function Home(props: PageProps<Post[]>) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>WiZtEk • Home</title>
       </Head>
-      <div className="mx-auto max-w-container px-4 transition-all duration-100 ease-in md:bg-white/90 md:backdrop-blur-sm dark:md:bg-gray-800/90 dark:md:backdrop-blur-sm">
+      <div className="mx-auto max-w-container px-4 transition-all duration-100 ease-in md:bg-white/90 md:backdrop-blur-sm dark:bg-slate-900 dark:md:backdrop-blur-sm">
         <main className="prose dark:prose-dark">
           <Body />
         </main>
@@ -31,17 +31,17 @@ export default function Home(props: PageProps<Post[]>) {
             {projects.map((project) => (
               <div key={project.repo}>
                 <a
-                  className="font-semibold hover:underline underline-offset-1 dark:text-blue-400"
+                  className="font-semibold hover:underline underline-offset-1 dark:text-white-400"
                   href={project.link}
                 >
                   {project.repo}
                 </a>
-                <p class="dark:text-gray-300">{project.description}</p>
+                <p class="dark:text-slate-300">{project.description}</p>
               </div>
             ))}
           </div>
           <span>
-            <a class="font-semibold dark:text-blue-400" href="/projects">
+            <a class="font-semibold dark:text-white-400" href="/projects">
               All projects →
             </a>
           </span>
@@ -53,13 +53,13 @@ export default function Home(props: PageProps<Post[]>) {
             {posts.map((post) => (
               <div class="flex justify-between">
                 <a
-                  className="font-semibold hover:underline underline-offset-1 dark:text-blue-400"
+                  className="font-semibold hover:underline underline-offset-1 dark:text-white-400"
                   key={post.slug}
                   href={`/blog/${post.slug}`}
                 >
                   {post.title}
                 </a>
-                <time class="text-gray-500 dark:text-gray-400">
+                <time class="text-slate-500 dark:text-slate-400">
                   {new Date(post.publishDate).toLocaleDateString("en-us", {
                     year: "numeric",
                     month: "long",
@@ -70,7 +70,7 @@ export default function Home(props: PageProps<Post[]>) {
             ))}
           </div>
           <span>
-            <a class="font-semibold dark:text-blue-400" href="/blog">
+            <a class="font-semibold dark:text-white-400" href="/blog">
               All posts →
             </a>
           </span>

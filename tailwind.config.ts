@@ -1,5 +1,5 @@
 import { type Config } from "tailwindcss";
-
+// import typography from "tailwindcss/typography";
 export default {
   content: [
     "{routes,islands,components}/**/*.{ts,tsx}",
@@ -15,4 +15,5 @@ export default {
     },
   },
   darkMode: "class",
+  // plugins: [typography],
 } satisfies Config;

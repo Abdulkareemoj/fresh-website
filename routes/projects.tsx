@@ -19,7 +19,7 @@ export default function Projects(props: PageProps<Project[]>) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>WiZtEk • Projects</title>
       </Head>
-      <main className="max-w-screen-md px-4 pt-16 mx-auto dark:bg-gray-900 dark:text-white">
+      <main className="max-w-screen-md px-4 pt-16 mx-auto dark:bg-slate-900 dark:text-white">
         <h1 className="text-5xl font-bold text-center dark:text-white">
           Projects
         </h1>

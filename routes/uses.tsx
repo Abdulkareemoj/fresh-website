@@ -49,13 +49,13 @@ export default function Uses({ data }: PageProps<Page | null>) {
         <style dangerouslySetInnerHTML={{ __html: CSS }} />
         <title>WiZtEk • Uses</title>
       </Head>
-      <main class="pb-8 dark:bg-gray-900 dark:text-white">
+      <main class="pb-8 dark:bg-slate-900 dark:text-white">
         <div class="text-5xl font-bold text-center dark:text-white">
           {data.title}
         </div>
-        <div class="text-2xl pb-4 dark:text-gray-300">{data.description}</div>
+        <div class="text-2xl pb-4 dark:text-slate-300">{data.description}</div>
         <div
-          class="markdown-body dark:bg-gray-800 dark:text-gray-200"
+          class="markdown-body dark:bg-slate-900 dark:text-slate-200"
           dangerouslySetInnerHTML={{ __html: render(data?.markdown) }}
         />
       </main>

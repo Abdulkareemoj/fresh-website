@@ -20,6 +20,7 @@
     "tailwindcss": "npm:tailwindcss@3.4.1",
     "tailwindcss/": "npm:/tailwindcss@3.4.1/",
     "tailwind-merge": "npm:tailwind-merge@2.3.0",
+    "tailwindcss/typography": "npm:@tailwindcss/typography@0.5.13",
     "tailwindcss/plugin": "npm:/tailwindcss@3.4.1/plugin.js",
     "$std/": "https://deno.land/std@0.216.0/"
   },
