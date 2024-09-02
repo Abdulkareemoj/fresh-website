@@ -229,7 +229,7 @@ export default function Header() {
                         {showToggleTheme && <ToggleDarkMode />}
 
                         {actions && actions.length > 0 && (
-                            <div className="ml-4 rtl:ml-0 rtl:mr-4 flex w-max flex-wrap justify-end">
+                            <div className="ml-4 rtl:ml-0 rtl:mr-4 flex w-max flex-wrap justify-end dark:text-white">
                                 {actions.map((callToAction, index) => (
                                     <CTA
                                         key={`item-action-${index}`}
