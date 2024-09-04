@@ -21,9 +21,11 @@ export default function BlogIndexPage(props: PageProps<Post[]>) {
       </Head>
       <main className="max-w-screen-md px-4 pt-16 mx-auto">
         <h1 className="text-5xl font-bold text-center">Blog</h1>
-        <div className="mt-8">
-          {posts.map((post) => <PostCard post={post} />)}
-        </div>
+        <section class="px-6 sm:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-4xl">
+          <div className="mb-8 md:mb-20 ">
+            {posts.map((post) => <PostCard post={post} />)}
+          </div>
+        </section>
       </main>
     </>
   );
