@@ -2,7 +2,7 @@ import { useState } from "preact/hooks";
 import ToggleMenu from "../components/ToggleMenu.tsx";
 import CTA from "../components/CTA.tsx";
 import ToggleDarkMode from "./ToggleDarkMode.tsx";
-
+import { asset } from "$fresh/runtime.ts";
 type Icon = string;
 
 type HeaderProps = {
@@ -60,8 +60,8 @@ export const headerData: HeaderProps = {
     ],
     actions: [
         {
-            text: "Download CV",
-            href: "/static/resume.pdf",
+            text: "Resume",
+            href: `${asset("/resume.pdf")}`,
             targetBlank: true,
         },
     ],
