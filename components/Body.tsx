@@ -14,7 +14,10 @@ export default function Body() {
         to know how it works and if possible improve it. I&apos;m mainly into
         {" "}
         <strong>game</strong> and <strong>web development</strong>{" "}
-        right now and I use the <strong>terminal</strong> as much as I can.
+        right now, trying to learn{" "}
+        <a href="http://">Stride3D (formerly Xenko)</a>{" "}
+        and<a href="http://">Blender</a>, I also use the{" "}
+        <strong>terminal</strong> as much as I can.
       </p>
 
       <p className="mb-4">
