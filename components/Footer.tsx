@@ -12,32 +12,32 @@ export default function Footer() {
         {
           name: "RSS",
           href: "/rss.xml",
-          icon: <IconRss className="w-2 h-2" />,
+          icon: <IconRss className="w-5 h-5" />,
         },
         {
           name: "Sitemap",
           href: "/sitemap.xml",
-          icon: <IconSitemap className="w-2 h-2" />,
+          icon: <IconSitemap className="w-5 h-5" />,
         },
         {
           name: "Email",
-          href: "mailto:abdulkareemojerinde@gmail.com",
-          icon: <IconMail className="w-2 h-2" />,
+          href: "mailto:example@example.com",
+          icon: <IconMail className="w-5 h-5" />,
         },
         {
           name: "GitHub",
-          href: "https://github.com/abdulkareemoj",
-          icon: <IconBrandGithub className="w-2 h-2" />,
+          href: "https://github.com/example",
+          icon: <IconBrandGithub className="w-5 h-5" />,
         },
         {
           name: "LinkedIn",
-          href: "https://www.linkedin.com/in/abdulkareem-ojerinde-863b39137/",
-          icon: <IconBrandLinkedin className="w-2 h-2" />,
+          href: "https://www.linkedin.com/in/example",
+          icon: <IconBrandLinkedin className="w-5 h-5" />,
         },
         {
           name: "X",
-          href: "https://x.com/abdulkareemoj",
-          icon: <IconBrandXFilled className="w-2 h-2" />,
+          href: "https://x.com/example",
+          icon: <IconBrandXFilled className="w-5 h-5" />,
         },
       ],
     },
@@ -47,27 +47,26 @@ export default function Footer() {
     <div className="prose">
       <hr />
 
-      <footer className="flex justify-items justify-between m-2">
+      <footer className="flex justify-between items-center m-2">
         <span className="font-semibold">
-          WiZtEk
+          Lorem ipsum dolor sit amet
         </span>
 
-        <div className="flex ">
+        <nav className="flex gap-2">
           {menus.map((item, index) => (
-            <div key={index}>
-              <div className="flex mt-2">
-                {item.links.map((child) => (
-                  <div className="px-1" key={child.name}>
-                    <a href={child.href}>
-                      {child.icon}
-                    </a>
-                  </div>
-                ))}
-              </div>
+            <div key={index} className="flex gap-3">
+              {item.links.map((child) => (
+                <a
+                  href={child.href}
+                  key={child.name}
+                  aria-label={child.name}
+                  className="px-1"
+                >
+                  {child.icon}
+                </a>
+              ))}
             </div>
           ))}
-        </div>
+        </nav>
       </footer>
     </div>
-  );
-}

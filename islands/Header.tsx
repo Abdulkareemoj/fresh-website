@@ -2,7 +2,7 @@ import { useState } from "preact/hooks";
 import ToggleMenu from "../components/ToggleMenu.tsx";
 import CTA from "../components/CTA.tsx";
 import ToggleDarkMode from "./ToggleDarkMode.tsx";
-import { asset } from "$fresh/runtime.ts";
+
 type Icon = string;
 
 type HeaderProps = {
@@ -60,8 +60,8 @@ export const headerData: HeaderProps = {
     ],
     actions: [
         {
-            text: "Resume",
-            href: `${asset("/resume.pdf")}`,
+            text: "Download CV",
+            href: "/static/resume.pdf",
             targetBlank: true,
         },
     ],
@@ -229,7 +229,7 @@ export default function Header() {
                         {showToggleTheme && <ToggleDarkMode />}
 
                         {actions && actions.length > 0 && (
-                            <div className="ml-4 rtl:ml-0 rtl:mr-4 flex w-max flex-wrap justify-end dark:text-white">
+                            <div className="ml-4 rtl:ml-0 rtl:mr-4 flex w-max flex-wrap justify-end">
                                 {actions.map((callToAction, index) => (
                                     <CTA
                                         key={`item-action-${index}`}

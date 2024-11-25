@@ -3,32 +3,27 @@ export default function Body() {
     <div className="dark:bg-gray-900 dark:text-white p-4 rounded-md">
       <p className="mb-4">
         <small className="text-neutral-500 dark:text-neutral-400">
-          IPA &nbsp; /ˈwiztek/ — no meaning, I made it up
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         </small>
         <br />
-        Hi there, I&apos;m <strong>Abdulkareem</strong> aka
-        <strong>{" "}WiZtEk</strong>. I&apos;m a dude with interests in
-        <strong>{" "}building things,</strong>{" "}
-        I guess I would describe myself as a Fullstack Developer/Software
-        Engineer but that's because I like to understand all parts of a system
-        to know how it works and if possible improve it. I&apos;m mainly into
-        {" "}
-        <strong>game</strong> and <strong>web development</strong>{" "}
-        right now, trying to learn{" "}
-        <a href="http://">Stride3D (formerly Xenko)</a>{" "}
-        and<a href="http://">Blender</a>, I also use the{" "}
-        <strong>terminal</strong> as much as I can.
+        Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit</strong>. 
+        Curabitur <strong>volutpat</strong> erat a justo tincidunt, non egestas velit fermentum. 
+        Praesent vel <strong>web development</strong> orci nec lectus auctor vehicula. 
+        Vivamus tristique <strong>game development</strong> purus in nisl fermentum scelerisque. 
+        Sed faucibus, ligula a tempus vestibulum, erat magna <strong>terminal</strong> aliquam leo, 
+        non dignissim ligula elit id nunc.
       </p>
 
       <p className="mb-4">
-        Right now I&apos;m working at{" "}
+        Aliquam tincidunt elit id justo viverra feugiat. Curabitur at risus
+        velit. Currently at{" "}
         <strong>
           <a
             href="#"
             target="_blank"
-            // className="text-blue-500 dark:text-blue-400"
+            className="text-blue-500 dark:text-blue-400"
           >
-            Nowhere
+            Lorem Ipsum Inc.
           </a>
         </strong>
         .
