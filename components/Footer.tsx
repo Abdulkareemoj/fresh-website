@@ -1,9 +1,9 @@
-import IconBrandGithub from "https://deno.land/x/tabler_icons_tsx@0.0.5/tsx/brand-github.tsx";
-import IconBrandLinkedin from "https://deno.land/x/tabler_icons_tsx@0.0.5/tsx/brand-linkedin.tsx";
-import IconMail from "https://deno.land/x/tabler_icons_tsx@0.0.5/tsx/mail.tsx";
-import IconRss from "https://deno.land/x/tabler_icons_tsx@0.0.5/tsx/rss.tsx";
-import IconSitemap from "https://deno.land/x/tabler_icons_tsx@0.0.5/tsx/sitemap.tsx";
-import IconBrandXFilled from "https://deno.land/x/tabler_icons_tsx@0.0.5/tsx/brand-x-filled.tsx";
+import IconBrandGithub from "https://deno.land/x/tabler_icons_tsx@0.0.7/tsx/brand-github.tsx";
+import IconBrandLinkedin from "https://deno.land/x/tabler_icons_tsx@0.0.7/tsx/brand-linkedin.tsx";
+import IconMail from "https://deno.land/x/tabler_icons_tsx@0.0.7/tsx/mail.tsx";
+import IconRss from "https://deno.land/x/tabler_icons_tsx@0.0.7/tsx/rss.tsx";
+import IconSitemap from "https://deno.land/x/tabler_icons_tsx@0.0.7/tsx/sitemap.tsx";
+import IconBrandXFilled from "https://deno.land/x/tabler_icons_tsx@0.0.7/tsx/brand-x-filled.tsx";
 
 export default function Footer() {
   const menus = [
