@@ -1,9 +1,9 @@
 import {
   createExtractor,
   Parser,
-} from "https://deno.land/std@0.219.0/front_matter/mod.ts";
-import { join } from "https://deno.land/std@0.211.0/path/join.ts";
-import { parse as parseYAML } from "https://deno.land/std@0.219.0/yaml/parse.ts";
+} from "https://deno.land/std@0.224.0/front_matter/mod.ts";
+import { join } from "https://deno.land/std@0.224.0/path/join.ts";
+import { parse as parseYAML } from "https://deno.land/std@0.224.0/yaml/parse.ts";
 
 const extractYAML = createExtractor({ yaml: parseYAML as Parser });
 // Updated path construction
